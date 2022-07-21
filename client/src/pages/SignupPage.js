@@ -11,8 +11,12 @@ function SignupPage(props) {
   const [name, setName] = useState("");
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
-  const [postCode, setPostCode] = useState("");
+  const [postCode, setPostCode] = useState();
   const [imageUrl, setImageUrl] = useState("");
+  const [animal, setAnimal] = useState("");
+  const [height, setHeight] = useState();
+  const [width, setWidth] = useState();
+
 
   const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -25,12 +29,16 @@ function SignupPage(props) {
   const handleBirthday = (e) => setBirthday(e.target.value);
   const handleGender = (e) => setGender(e.target.value);
   const handlePostCode = (e) => setPostCode(e.target.value);
+  const handleAnimal = (e) => setAnimal(e.target.value);
+  const handleHeight = (e) => setHeight(e.target.value);
+  const handleWidth = (e) => setWidth(e.target.value);
+
 
 
   const handleSignupSubmit = (e) => {
     e.preventDefault();
-    const requestBody = { email, password, name, birthday, gender, postCode };
-    // 照片之後
+    const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width };
+    // 照片之後再加
 
     // Make an axios request to the API
     // If POST request is successful redirect to login page
@@ -68,6 +76,15 @@ function SignupPage(props) {
 
         <label>Post code:</label>
         <input type="text" name="postCode" value={postCode} onChange={handlePostCode} />
+
+        <label>Animal:</label>
+        <input type="text" name="animal" value={animal} onChange={handleAnimal} />
+
+        <label>Height:</label>
+        <input type="number" name="height" value={height} onChange={handleHeight} />
+
+        <label>Width:</label>
+        <input type="number" name="width" value={width} onChange={handleWidth} />
 
         {/* 上傳照片 */}
 

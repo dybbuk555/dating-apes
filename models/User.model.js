@@ -10,9 +10,9 @@ const userSchema = new Schema({
   gender: String,
 
   //要再加上這三欄
-  // animal:String,
-  // height:Number,
-  // width:Number,
+  animal:String,
+  height:Number,
+  width:Number,
 
   postCode: String,
   passwordHash: String,

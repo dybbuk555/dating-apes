@@ -25,8 +25,6 @@ function UserListPage() {
             .catch((error) => console.log(error));
     };
 
-    // We set this effect will run only once, after the initial render
-    // by setting the empty dependency array - []
     useEffect(() => {
         getAllUsers();
     }, []);
@@ -49,7 +47,7 @@ function UserListPage() {
             <div>
 
 
-                {users?.map((user) => <UserCard key={user._id} user={...user} />)}
+                {users?.map((user) => <UserCard key={user._id} user={user} />)}
 
             </div>
         </>
