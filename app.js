@@ -16,8 +16,22 @@ require("./config")(app);
 const { isAuthenticated } = require("./middleware/jwt.middleware");
 //未來的routes要加上中間件 isAuthenticated 來保護
  
+// const allRoutes = require("./routes/index.routes");
+// app.use("/api", allRoutes);
+
 const authRouter = require("./routes/auth.routes");
 app.use("/auth", authRouter);
+
+
+// const userRouter = require("./routes/user.routes");
+// app.use("/api", userRouter);
+
+const userRouter = require("./routes/user.routes");
+app.use("/api", isAuthenticated, userRouter);
+
+
+
+
 
 require("./error-handling")(app);
 
