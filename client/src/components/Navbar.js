@@ -28,8 +28,9 @@ function Navbar() {
             {/* 沒登入時 看見註冊和登入按鈕 */}
             {!isLoggedIn && (
                 <>
-                    <Link to="/signup"> <button>JOIN US</button> </Link>
-                    <Link to="/login"> <button>Login</button> </Link>
+                    {/* 移到首頁 */}
+                    {/* <Link to="/signup"> <button>JOIN US</button> </Link> */}
+                    {/* <Link to="/login"> <button>Login</button> </Link> */}
                 </>
             )}
         </nav>
