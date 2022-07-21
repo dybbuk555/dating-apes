@@ -9,14 +9,13 @@ const userSchema = new Schema({
   birthday:  { type: Date },
   gender: String,
 
-  //要再加上這三欄
   animal:String,
   height:Number,
   width:Number,
 
   postCode: String,
   passwordHash: String,
-  imageUrl: String,
+  url: String,
 
   // name: { type: String, required: true },
   // birthday: { type: Date, required: true },
