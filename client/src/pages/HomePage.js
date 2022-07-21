@@ -13,17 +13,23 @@ function HomePage() {
       <div>
         <h1>datingApes</h1>
         {/* 測試階段 先讓我看到按鈕 */}
-        {/* {!isLoggedIn && ( */}
+        {!isLoggedIn && (
         <>
           <Link to="/login"> <button>Login</button> </Link>
         </>
-        {/* )} */}
+        )}
 
-        {/* {isLoggedIn && ( 
-        <>
-          <Link to="/login"> <button>Log Out</button> </Link>
-        </>
-         )}  */}
+        {/* 在登入狀態中 可以前往查看的連結 */}
+        {isLoggedIn && (
+                <>
+                    {/* <Link to="/projects">
+                        <button>Projects</button>
+                    </Link> */}
+
+                    <button onClick={logOutUser}>Logout</button>
+                    <span>{user && user.name}</span>
+                </>
+            )}
         
       </div>
 
