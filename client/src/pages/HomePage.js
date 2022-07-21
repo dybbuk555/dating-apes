@@ -9,15 +9,22 @@ function HomePage() {
 
   return (
     <div>
-      
+
       <div>
         <h1>datingApes</h1>
+        {/* 測試階段 先讓我看到按鈕 */}
+        {/* {!isLoggedIn && ( */}
+        <>
+          <Link to="/login"> <button>Login</button> </Link>
+        </>
+        {/* )} */}
 
-        {!isLoggedIn && (
-          <>
-            <Link to="/login"> <button>Login</button> </Link>
-          </>
-        )}
+        {/* {isLoggedIn && ( 
+        <>
+          <Link to="/login"> <button>Log Out</button> </Link>
+        </>
+         )}  */}
+        
       </div>
 
       <div>
@@ -32,14 +39,15 @@ function HomePage() {
 
 
       <div>
-        {!isLoggedIn && (
-          <>
-            <Link to="/signup"> <button style={{ fontSize: '1.2em', fontWeight: '900', color: 'white', backgroundColor: 'black', padding: '0.6rem', paddingLeft: '2rem', paddingRight: '2rem', border: 'none' }}>JOIN US</button> </Link>
-            {/* <Link to="/login"> <button>Login</button> </Link> */}
-          </>
-        )}
+        {/* 測試階段 先讓我看到按鈕 */}
+        {/* {!isLoggedIn && ( */}
+        <>
+          <Link to="/signup"> <button style={{ fontSize: '1.2em', fontWeight: '900', color: 'white', backgroundColor: 'black', padding: '0.6rem', paddingLeft: '2rem', paddingRight: '2rem', border: 'none' }}>JOIN US</button> </Link>
+          {/* <Link to="/login"> <button>Login</button> </Link> */}
+        </>
+        {/* )} */}
       </div>
-    
+
     </div>
   );
 }
