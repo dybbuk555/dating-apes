@@ -12,16 +12,11 @@ function SignupPage(props) {
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
   const [postCode, setPostCode] = useState();
-  const [imageUrl, setImageUrl] = useState("");
   const [animal, setAnimal] = useState("");
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
-
-
   const [errorMessage, setErrorMessage] = useState(undefined);
-
   const navigate = useNavigate();
-
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -35,23 +30,42 @@ function SignupPage(props) {
 
 
 
+  // 上傳照片
+  const [image, setImage] = useState("");
+
   const handleSignupSubmit = (e) => {
     e.preventDefault();
-    const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width };
-    // 照片之後再加
 
-    // Make an axios request to the API
-    // If POST request is successful redirect to login page
-    // If the request resolves with an error, set the error message in the state
-    axios.post(`${API_URL}/auth/signup`, requestBody)
-      .then((response) => {
-        navigate("/login");
+    const data = new FormData()
+    data.append("file", image)
+    data.append("upload_preset", "third-project")
+    data.append("cloud_name", "dsy2gebem")
+    fetch("  https://api.cloudinary.com/v1_1/dsy2gebem/image/upload", {
+      method: "post",
+      body: data
+    })
+
+      .then(response => response.json())
+      .then(data => {
+        //先上傳照片到雲端再拿照片到後端 要等待 所以.then()再.then 
+        //正確的方式應該要用await
+
+        const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url: data.url };
+
+        axios.post(`${API_URL}/auth/signup`, requestBody)
+          .then((response) => {
+            navigate("/login");
+          })
+          .catch((error) => {
+            const errorDescription = error.response.data.message;
+            setErrorMessage(errorDescription);
+          })
+
       })
-      .catch((error) => {
-        const errorDescription = error.response.data.message;
-        setErrorMessage(errorDescription);
-      })
-  };
+      .catch(err => console.log(err))
+  }
+
+
 
 
   return (
@@ -86,7 +100,10 @@ function SignupPage(props) {
         <label>Width:</label>
         <input type="number" name="width" value={width} onChange={handleWidth} />
 
+
         {/* 上傳照片 */}
+        <label>Please uppload animal's photos...</label>
+        <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
 
 
         <button type="submit">Sign Up</button>
