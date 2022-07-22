@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 function UserCard({ user }) {
     //注意解構obj的方式
+<<<<<<< HEAD
+    const { name, birthday, _id } = user
+=======
     const { email, name, birthday, gender, postCode, _id,url } = user
+>>>>>>> dev
 
     const [age, setAge] = useState(0)
 

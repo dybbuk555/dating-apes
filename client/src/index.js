@@ -7,7 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProviderWrapper } from "./context/auth.context";
 
 
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+
 root.render(
   <BrowserRouter>
     <AuthProviderWrapper>

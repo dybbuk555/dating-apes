@@ -9,11 +9,13 @@ const userSchema = new Schema({
   birthday:  { type: Date },
   gender: String,
 
+  
   animal:String,
   height:Number,
   width:Number,
 
   postCode: String,
+  aboutPet: String,
   passwordHash: String,
   url: String,
 
