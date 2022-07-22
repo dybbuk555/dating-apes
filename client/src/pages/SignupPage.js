@@ -15,11 +15,7 @@ function SignupPage(props) {
   const [animal, setAnimal] = useState("");
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
-
-
-
   const [errorMessage, setErrorMessage] = useState(undefined);
-
   const navigate = useNavigate();
 
   const handleEmail = (e) => setEmail(e.target.value);
@@ -36,9 +32,10 @@ function SignupPage(props) {
 
   // 上傳照片
   const [image, setImage] = useState("");
-  const [url, setUrl] = useState("");
 
-  const handleImage = () => {
+  const handleSignupSubmit = (e) => {
+    e.preventDefault();
+
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", "third-project")
@@ -48,51 +45,27 @@ function SignupPage(props) {
       body: data
     })
 
-      // res.status(201).json({ user: user });
-      .then(response => response.json({ user: url }))
+      .then(response => response.json())
       .then(data => {
+        //先上傳照片到雲端再拿照片到後端 要等待 所以.then()再.then 
+        //正確的方式應該要用await
 
-        setUrl(data.url)
+        const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url: data.url };
 
-
-        //from here i have url, then want send the url to backend
-        //新增這裡
-        axios.post('/signup')
-          .then(response => {
-            response.json({ url })
+        axios.post(`${API_URL}/auth/signup`, requestBody)
+          .then((response) => {
+            navigate("/login");
           })
-
-
-
-
-
-
+          .catch((error) => {
+            const errorDescription = error.response.data.message;
+            setErrorMessage(errorDescription);
+          })
 
       })
       .catch(err => console.log(err))
   }
 
 
-  const handleSignupSubmit = (e) => {
-    e.preventDefault();
-
-    handleImage()
-
-    const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url };
-    // 照片之後再加
-
-    // Make an axios request to the API
-    // If POST request is successful redirect to login page
-    // If the request resolves with an error, set the error message in the state
-    axios.post(`${API_URL}/auth/signup`, requestBody)
-      .then((response) => {
-        navigate("/login");
-      })
-      .catch((error) => {
-        const errorDescription = error.response.data.message;
-        setErrorMessage(errorDescription);
-      })
-  };
 
 
   return (
@@ -132,7 +105,6 @@ function SignupPage(props) {
         <label>Please uppload animal's photos...</label>
         <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
 
-        {/* <button onClick={handleImage}>Upload</button> */}
 
         <button type="submit">Sign Up</button>
       </form>
