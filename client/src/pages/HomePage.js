@@ -6,9 +6,6 @@ import { useEffect } from "react";
 import WebFont from 'webfontloader';
 
 import logoNavbar from '../images/logoNavbar.png';
-import bg01 from '../images/bg01.png';
-import bg02 from '../images/bg02.png';
-import bg03 from '../images/bg03.png';
 
 
 
@@ -33,7 +30,7 @@ function HomePage() {
   return (
     // <div style={{bachgroundImage:`${bg01}`}}>
     // <div style={{bachgroundImage:`${bg01}`}}>
-    <div style={{ width: '100vw', height: '100vh', backgroundRepeat: 'no-repeat', backgroundImage: `url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658491209/third-project-bg/bg01_zijsva.png)`, backgroundSize: 'cover' }}>
+    <div style={{ width: '100vw', height: '100vh', backgroundRepeat: 'no-repeat', backgroundImage: `url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658500441/third-project-bg/bgAnimation_wps0uz.gif)`, backgroundSize: 'cover' }}>
 
 
       <div>

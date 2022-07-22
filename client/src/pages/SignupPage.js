@@ -15,6 +15,8 @@ function SignupPage(props) {
   const [animal, setAnimal] = useState("");
   const [height, setHeight] = useState();
   const [width, setWidth] = useState();
+  const [aboutPet, setAboutPet] = useState();
+
   const [errorMessage, setErrorMessage] = useState(undefined);
   const navigate = useNavigate();
 
@@ -27,6 +29,8 @@ function SignupPage(props) {
   const handleAnimal = (e) => setAnimal(e.target.value);
   const handleHeight = (e) => setHeight(e.target.value);
   const handleWidth = (e) => setWidth(e.target.value);
+  const handleAboutPet = (e) => setAboutPet(e.target.value);
+
 
 
 
@@ -50,7 +54,7 @@ function SignupPage(props) {
         //先上傳照片到雲端再拿照片到後端 要等待 所以.then()再.then 
         //正確的方式應該要用await
 
-        const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url: data.url };
+        const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url: data.url, aboutPet };
 
         axios.post(`${API_URL}/auth/signup`, requestBody)
           .then((response) => {
@@ -88,7 +92,7 @@ function SignupPage(props) {
         <label>Gender:</label>
         <input type="text" name="gender" value={gender} onChange={handleGender} />
 
-        <label>Post code:</label>
+        <label>Post Code:</label>
         <input type="text" name="postCode" value={postCode} onChange={handlePostCode} />
 
         <label>Animal:</label>
@@ -99,6 +103,9 @@ function SignupPage(props) {
 
         <label>Width:</label>
         <input type="number" name="width" value={width} onChange={handleWidth} />
+
+        <label>About Your Pet:</label>
+        <input type="text" name="aboutPet" value={aboutPet} onChange={handleAboutPet} />
 
 
         {/* 上傳照片 */}
