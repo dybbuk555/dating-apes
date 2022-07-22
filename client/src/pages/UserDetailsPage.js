@@ -26,7 +26,8 @@ function UserDetailsPage (props) {
       })
       .catch((error) => console.log(error));
   };
-  
+
+ 
   
   useEffect(()=> {
     getUser();
@@ -37,10 +38,21 @@ function UserDetailsPage (props) {
     <div className="UserDetails">
       {user && (
         <>
+        {/* 照片之後加 */}
           <h1>{user.name}</h1>
-          <p>{user.animal}</p>
+          <p>Type:{user.animal}</p>
+          <p>Gender:{user.gender}</p>
+          <p>Birthday:{user.birthday.slice(0,10)}</p>
+          <p>Height:{user.height}</p>
+          <p>Width:{user.width}</p>
+          <p>Active Area:{user.postCode}</p>
+          <p>About Me:{user.aboutPet}</p>
+
         </>
       )}
+
+
+
 
       
 

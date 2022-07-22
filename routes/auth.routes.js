@@ -9,7 +9,7 @@ const saltRounds = 10;
 
 // POST  註冊授權
 router.post('/signup', (req, res, next) => {
-  const { email, password, name, birthday, gender, postCode, animal, height, width } = req.body;
+  const { email, password, name, birthday, gender, postCode, animal, height, width, aboutPet } = req.body;
 
   console.log(req.body)
   if (email === '' || password === '') {
@@ -27,14 +27,14 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, name, birthday, gender, postCode, animal, height, width, password: hashedPassword });
+      return User.create({ email, name, birthday, gender, postCode, animal, height, width, aboutPet, password: hashedPassword });
     })
     .then((createdUser) => {
       // const { email, password, name, birthday, gender, postCode } = createdUser;
-      const { email, password, name, birthday, gender, postCode, animal, height, width, _id } = createdUser;
+      const { email, password, name, birthday, gender, postCode, animal, height, width, _id, aboutPet } = createdUser;
 
 
-      const user = { email, password, name, birthday, gender, postCode, animal, height, width, _id };
+      const user = { email, password, name, birthday, gender, postCode, animal, height, width, _id, aboutPet };
 
 
       res.status(201).json({ user: user });
