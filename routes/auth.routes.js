@@ -9,7 +9,7 @@ const saltRounds = 10;
 
 // POST  註冊授權
 router.post('/signup', (req, res, next) => {
-  const { email, password, name, birthday, gender, postCode, animal, height, width } = req.body;
+  const { email, password, name, birthday, gender, postCode, animal, height, width,url } = req.body;
 
   console.log(req.body)
   if (email === '' || password === '') {
@@ -17,18 +17,6 @@ router.post('/signup', (req, res, next) => {
     return;
   }
 
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  // if (!emailRegex.test(email)) {
-  //   res.status(400).json({ message: 'Please provide a valid email address.' });
-  //   return;
-  // }
-
-  // Use regex to validate the password format
-  // const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  // if (!passwordRegex.test(password)) {
-  //   res.status(400).json({ message: 'Password must have at least 6 characters and contain at least one number, one lowercase and one uppercase letter.' });
-  //   return;
-  // }
 
   User.findOne({ email })
     .then((foundUser) => {
@@ -40,14 +28,14 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, name, birthday, gender, postCode, animal, height, width, password: hashedPassword });
+      return User.create({ email, name, birthday, gender, postCode, animal, height, width,url, password: hashedPassword });
     })
     .then((createdUser) => {
       // const { email, password, name, birthday, gender, postCode } = createdUser;
-      const { email, password, name, birthday, gender, postCode, animal, height, width, _id } = createdUser;
+      const { email, password, name, birthday, gender, postCode, animal, height, width, url, _id } = createdUser;
 
 
-      const user = { email, password, name, birthday, gender, postCode, animal, height, width, _id };
+      const user = { email, password, name, birthday, gender, postCode, animal, height, width, url, _id };
 
 
       res.status(201).json({ user: user });

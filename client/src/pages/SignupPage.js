@@ -43,16 +43,31 @@ function SignupPage(props) {
     data.append("file", image)
     data.append("upload_preset", "third-project")
     data.append("cloud_name", "dsy2gebem")
-    // fetch("  https://api.cloudinary.com/v1_1/breellz/image/upload",{
     fetch("  https://api.cloudinary.com/v1_1/dsy2gebem/image/upload", {
       method: "post",
       body: data
     })
 
-    // res.status(201).json({ user: user });
+      // res.status(201).json({ user: user });
       .then(response => response.json({ user: url }))
       .then(data => {
+
         setUrl(data.url)
+
+
+        //from here i have url, then want send the url to backend
+        //新增這裡
+        axios.post('/signup')
+          .then(response => {
+            response.json({ url })
+          })
+
+
+
+
+
+
+
       })
       .catch(err => console.log(err))
   }
@@ -60,6 +75,9 @@ function SignupPage(props) {
 
   const handleSignupSubmit = (e) => {
     e.preventDefault();
+
+    handleImage()
+
     const requestBody = { email, password, name, birthday, gender, postCode, animal, height, width, url };
     // 照片之後再加
 
@@ -113,13 +131,8 @@ function SignupPage(props) {
         {/* 上傳照片 */}
         <label>Please uppload animal's photos...</label>
         <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
-        <button onClick={handleImage}>Upload</button>
 
-
-
-
-
-
+        {/* <button onClick={handleImage}>Upload</button> */}
 
         <button type="submit">Sign Up</button>
       </form>
