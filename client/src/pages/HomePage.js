@@ -60,7 +60,7 @@ function HomePage() {
 
       </div>
       <div>
-        <h1 style={{ fontFamily: 'Rampart One', fontWeight: 'lighter', fontSize: '3.4em' }}>This is fish being happy</h1>
+        <h1 style={{ fontFamily: 'Rampart One', fontWeight: 'lighter', fontSize: '3.3em' }}>This is fish being happy</h1>
         <p style={{ fontFamily: 'Quicksand', fontWeight: '300', fontSize: '1.3em', width: '55vw' }}>Huizi asked Zhuangzi: <br />“ Sir, you are not a fish, how do you know what the happiness of fish is? ”<br />Zhuangzi answered:<br /> “ Sir, you are not me, how do you know that I do not know what the happiness of fish is? ”
           <br />The conversation of these two ancient philosophers showed that the limited nature of human knowledge.
           Yes! We can never know if the FISH/DOG/CAT/APE... is happy.
