@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import Navbar from "../components/Navbar";
+
 
 const API_URL = "http://localhost:5005";
 
@@ -36,9 +38,11 @@ function UserDetailsPage(props) {
 
   return (
     <div className="UserDetails">
+      <Navbar />
+
       {user && (
         <>
-          <img src={user.url} style={{ height: '350px',width: '500px', objectFit: 'cover' }}/>
+          <img src={user.url} style={{ height: '350px', width: '500px', objectFit: 'cover' }} />
 
           <h1>{user.name}</h1>
           <p>Type:{user.animal}</p>

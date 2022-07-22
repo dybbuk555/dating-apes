@@ -3,6 +3,8 @@ import axios from "axios";
 import UserCard from "./../components/UserCard";
 import { useContext } from "react";
 import { AuthContext } from "./../context/auth.context";
+import Navbar from "../components/Navbar";
+
 
 const API_URL = "http://localhost:5005";
 
@@ -31,26 +33,17 @@ function UserListPage() {
 
 
     return (
-        <>
-            <div>
-                {isLoggedIn && (
-                    <>
-                        {/* <Link to="/projects">
-                        <button>Projects</button>
-                    </Link> */}
+        <div>
+            <Navbar />
 
-                        <button onClick={logOutUser}>Logout</button>
-                        <span>{user && user.name}</span>
-                    </>
-                )}
-            </div>
+      
             <div>
 
 
                 {users?.map((user) => <UserCard key={user._id} user={user} />)}
 
             </div>
-        </>
+        </div>
     );
 }
 

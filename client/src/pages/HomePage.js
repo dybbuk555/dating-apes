@@ -4,8 +4,9 @@ import { AuthContext } from "./../context/auth.context";
 
 import { useEffect } from "react";
 import WebFont from 'webfontloader';
+import Navbar from "../components/Navbar";
 
-import logoNavbar from '../images/logoNavbar.png';
+
 
 
 
@@ -28,34 +29,30 @@ function HomePage() {
 
 
   return (
+
     // <div style={{bachgroundImage:`${bg01}`}}>
     // <div style={{bachgroundImage:`${bg01}`}}>
     <div style={{ width: '100vw', height: '100vh', backgroundRepeat: 'no-repeat', backgroundImage: `url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658500441/third-project-bg/bgAnimation_wps0uz.gif)`, backgroundSize: 'cover' }}>
+      <Navbar />
+
+      {/* <div> */}
 
 
-      <div>
 
-        <img src={logoNavbar} style={{ height: '7vh' }} />
 
-        {!isLoggedIn && (
-          <div>
-            <Link to="/login"> <button>Login</button> </Link>
-          </div>
-        )}
-
-        {/* 在登入狀態中 可以前往查看的連結 */}
-        {isLoggedIn && (
+      {/* 在登入狀態中 可以前往查看的連結 */}
+      {/* {isLoggedIn && (
           <>
-            {/* <Link to="/projects">
+            <Link to="/projects">
                         <button>Projects</button>
-                    </Link> */}
+                    </Link>
 
             <button onClick={logOutUser}>Logout</button>
             <span>{user && user.name}</span>
           </>
-        )}
+        )} */}
 
-      </div>
+      {/* </div> */}
       <div>
         <h1 style={{ fontFamily: 'Rampart One', fontWeight: 'lighter', fontSize: '3.3em' }}>This is fish being happy</h1>
         <p style={{ fontFamily: 'Quicksand', fontWeight: '300', fontSize: '1.3em', width: '55vw' }}>Huizi asked Zhuangzi: <br />“ Sir, you are not a fish, how do you know what the happiness of fish is? ”<br />Zhuangzi answered:<br /> “ Sir, you are not me, how do you know that I do not know what the happiness of fish is? ”

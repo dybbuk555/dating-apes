@@ -2,6 +2,10 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../context/auth.context";
+import Navbar from "../components/Navbar";
+
+
+
 
 const API_URL = "http://localhost:5005";
 
@@ -18,7 +22,7 @@ function LoginPage(props) {
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
-  
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
@@ -28,21 +32,23 @@ function LoginPage(props) {
         navigate("/users");
 
         console.log("JWT token", response.data.authToken);
-        
+
         storeToken(response.data.authToken);
         authenticateUser();
         // navigate("/users");
       })
       .catch((error) => {
-      	const errorDescription = error.response.data.message;
-      	setErrorMessage(errorDescription);
-    	})
+        const errorDescription = error.response.data.message;
+        setErrorMessage(errorDescription);
+      })
   };
-  
-  return (
-    <div className="LoginPage">
-      <h1>Login</h1>
 
+  return (
+
+    <div className="LoginPage">
+
+      <Navbar />
+      <h1>Login</h1>
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
@@ -52,7 +58,7 @@ function LoginPage(props) {
 
         <button type="submit">Login</button>
       </form>
-      { errorMessage && <p className="error-message">{errorMessage}</p> }
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Don't you have an account yet?</p>
       <Link to={"/signup"}> Sign Up</Link>
