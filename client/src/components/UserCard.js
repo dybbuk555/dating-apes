@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 function UserCard({ user }) {
     //注意解構obj的方式
+<<<<<<< HEAD
     const { name, birthday, _id } = user
+=======
+    const { email, name, birthday, gender, postCode, _id,url } = user
+>>>>>>> dev
 
     const [age, setAge] = useState(0)
 
@@ -22,6 +26,8 @@ function UserCard({ user }) {
 
             {/* 照片跟名字跟年紀 */}
             <Link to={`/users/${_id}`}>
+                <img src={url} />
+
                 <h3>{name},{age}</h3>
             </Link>
 
