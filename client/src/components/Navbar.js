@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./../context/auth.context";
+import logoNavbar from '../images/logoNavbar.png';
+
 
 function Navbar() {
     // Subscribe to the AuthContext to gain access to
@@ -9,9 +11,21 @@ function Navbar() {
 
     return (
         <nav>
-            <Link to="/">
+            {/* <Link to="/">
                 <button>Home</button>
-            </Link>
+            </Link> */}
+
+
+            <a href="http://localhost:3000/">
+                <img src={logoNavbar} style={{ height: '7vh' }} />
+            </a>
+
+            {!isLoggedIn && (
+                <div>
+                    <Link to="/login"> <button>Login</button> </Link>
+                </div>
+            )}
+
 
             {/* 在登入狀態中 可以前往查看的連結 */}
             {isLoggedIn && (
@@ -21,18 +35,19 @@ function Navbar() {
                     </Link> */}
 
                     <button onClick={logOutUser}>Logout</button>
-                    <span>{user && user.name}</span>
+                    {/* <span>{user && user.name}</span> */}
                 </>
             )}
 
             {/* 沒登入時 看見註冊和登入按鈕 */}
-            {!isLoggedIn && (
+            {/* {!isLoggedIn && (
                 <>
-                    {/* 移到首頁 */}
-                    {/* <Link to="/signup"> <button>JOIN US</button> </Link> */}
-                    {/* <Link to="/login"> <button>Login</button> </Link> */}
+                    移到首頁
+                    <Link to="/signup"> <button>JOIN US</button> </Link>
+                    <Link to="/login"> <button>Login</button> </Link>
                 </>
-            )}
+            )} */}
+
         </nav>
     );
 }
