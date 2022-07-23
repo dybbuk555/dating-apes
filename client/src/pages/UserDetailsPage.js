@@ -2,12 +2,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import WebFont from 'webfontloader';
+
 
 
 const API_URL = "http://localhost:5005";
 
 
 function UserDetailsPage(props) {
+  //字體設定
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Rampart One', 'Quicksand']
+      }
+    });
+  }, []);
   const [user, setUser] = useState(null);
   const { userId } = useParams();
 
@@ -37,39 +47,30 @@ function UserDetailsPage(props) {
 
 
   return (
-    <div className="UserDetails">
+    <div className='UserDetail-1' style={{ fontFamily: 'Quicksand' }}>
       <Navbar />
 
       {user && (
-        <>
-          <img src={user.url} style={{ height: '350px', width: '500px', objectFit: 'cover' }} />
+        <div className='UserDetail-2'>
+          <div className='UserDetail-2-1'>
+            <img src={user.url} style={{ height: '350px', width: '500px', objectFit: 'cover' }} />
+          </div>
 
-          <h1>{user.name}</h1>
-          <p>Type:{user.animal}</p>
-          <p>Gender:{user.gender}</p>
-          <p>Birthday:{user.birthday.slice(0, 10)}</p>
-          <p>Height:{user.height}</p>
-          <p>Width:{user.width}</p>
-          <p>Active Area:{user.postCode}</p>
-          <p>About Me:{user.aboutPet}</p>
-
-        </>
+          <div className='UserDetail-2-2'>
+            <h1>{user.name}</h1>
+            <p>Type:{user.animal}</p>
+            <p>Gender:{user.gender}</p>
+            <p>Birthday:{user.birthday.slice(0, 10)}</p>
+            <p>Height:{user.height}</p>
+            <p>Width:{user.width}</p>
+            <p>LANGUAGE:{user.lang}</p>
+            <p>About Me:{user.aboutPet}</p>
+          </div>
+        </div>
       )}
 
 
-
-
-
-
-      {/* { user && user.tasks.map((task) => <TaskCard key={task._id} {...task} /> )}  */}
-
-      <Link to="/users">
-        <button>Check Others</button>
-      </Link>
-
-
-
-    </div>
+    </div >
   );
 }
 

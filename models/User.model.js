@@ -14,7 +14,7 @@ const userSchema = new Schema({
   height:Number,
   width:Number,
 
-  postCode: String,
+  lang: String,
   aboutPet: String,
   passwordHash: String,
   url: String,

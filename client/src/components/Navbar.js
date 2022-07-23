@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./../context/auth.context";
-import logoNavbar from '../images/logoNavbar.png';
+import logoNavbar from '../images/logoNavbar.svg';
 
 
 function Navbar() {
@@ -10,45 +10,66 @@ function Navbar() {
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
     return (
-        <nav>
-            {/* <Link to="/">
-                <button>Home</button>
-            </Link> */}
+        <nav className='Navbar-1'>
 
+            <div className='Navbar-2'>
+                <a href="http://localhost:3000/">
+                    <img src={logoNavbar} style={{ height: '7vh' }} />
+                </a>
+            </div>
 
-            <a href="http://localhost:3000/">
-                <img src={logoNavbar} style={{ height: '7vh' }} />
-            </a>
-
+            {/* <div className='Navbar-2-1'> */}
             {!isLoggedIn && (
-                <div>
-                    <Link to="/login"> <button>Login</button> </Link>
+                <div className='Navbar-2-1'>
+                    <>
+                        <p>Already hadve an account?</p>
+                    </>
+                    <>
+                        <Link to="/login"> <button style={{
+                            backgroundColor: 'Transparent',
+                            border: '1.5px solid black',
+                            padding: '7px',
+                            borderRadius: '3px',
+                            paddingLeft: '14px',
+                            paddingRight: '14px',
+                        }}>LOGIN</button> </Link>
+                    </>
                 </div>
             )}
+            {/* </div> */}
 
 
             {/* 在登入狀態中 可以前往查看的連結 */}
-            {isLoggedIn && (
-                <>
-                    {/* <Link to="/projects">
-                        <button>Projects</button>
-                    </Link> */}
+            <div className='Navbar-2-2'>
+                {isLoggedIn && (
+                    <div className='Navbar-3'>
+                        <Link to="/users">
+                            <button style={{
+                                backgroundColor: 'rgba(255,255,102,0.8)',
+                                border: '1px solid yellow',
+                                padding: '7.2px 25px',
+                                // borderRadius: '3px',
+                                color: 'black',
+                                fontWeight: 'bold',
+                                letterSpacing: '0.6px',
 
-                    <button onClick={logOutUser}>Logout</button>
-                    {/* <span>{user && user.name}</span> */}
-                </>
-            )}
+                                marginRight: '30px'
+                            }}>WALKING AROUND</button>
+                        </Link>
 
-            {/* 沒登入時 看見註冊和登入按鈕 */}
-            {/* {!isLoggedIn && (
-                <>
-                    移到首頁
-                    <Link to="/signup"> <button>JOIN US</button> </Link>
-                    <Link to="/login"> <button>Login</button> </Link>
-                </>
-            )} */}
+                        <button style={{
+                            backgroundColor: 'Transparent',
+                            border: '1px solid gray',
+                            padding: '7px',
+                            // borderRadius: '3px',
+                            paddingLeft: '14px',
+                            paddingRight: '14px'
+                        }} onClick={logOutUser}>LOG OUT</button>
+                    </div>
+                )}
+            </div>
 
-        </nav>
+        </nav >
     );
 }
 

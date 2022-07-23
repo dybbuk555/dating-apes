@@ -50,18 +50,18 @@ function LoginPage(props) {
       <Navbar />
       <h1>Login</h1>
       <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
+        <label>EMAIL:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
-        <label>Password:</label>
+        <label>PASSWORD:</label>
         <input type="password" name="password" value={password} onChange={handlePassword} />
 
-        <button type="submit">Login</button>
+        <button type="submit">LOGIN</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Don't you have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
+      <Link to={"/signup"}> SIGN UP</Link>
     </div>
   )
 }
