@@ -1,20 +1,31 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "./../context/auth.context";
 import logoNavbar from '../images/logoNavbar.svg';
+import WebFont from 'webfontloader';
+
 
 
 function Navbar() {
+    //字體設定
+    useEffect(() => {
+        WebFont.load({
+            google: {
+                families: ['Quicksand']
+            }
+        });
+    }, []);
+
     // Subscribe to the AuthContext to gain access to
     // the values from AuthContext.Provider `value` prop
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
     return (
-        <nav className='Navbar-0'>
+        <nav className='Navbar-0' style={{ fontFamily: 'Quicksand' }}>
 
-
-
+            {/* 在非登入狀態中 可以前往查看的連結 */}
             {!isLoggedIn && (
+
                 <div className='Navbar-1'>
 
                     <div className='Navbar-2-1'>
@@ -24,11 +35,12 @@ function Navbar() {
                     </div>
 
 
-                    <div className='Navbar-2-2'>
+                    <div className='Navbar-02-02'>
                         <p>Already hadve an account?</p>
+
                     </div>
 
-                    <div className='Navbar-2-3'>
+                    <div className='Navbar-02-03'>
                         <Link to="/login"> <button style={{
                             backgroundColor: 'Transparent',
                             border: '1.5px solid black',
@@ -43,7 +55,6 @@ function Navbar() {
 
 
             {/* 在登入狀態中 可以前往查看的連結 */}
-
             {isLoggedIn && (
 
                 <div className='Navbar-1'>
@@ -69,13 +80,13 @@ function Navbar() {
                                 backgroundColor: 'transparent',
 
                                 border: '1px solid yellow',
-                                border:'none',
+                                border: 'none',
                                 padding: '8px 27px 8px 27px',
                                 // borderRadius: '3px',
                                 color: 'black',
                                 fontWeight: 'bold',
                                 letterSpacing: '-0.3px',
-                                fontSize:'1.2rem',
+                                fontSize: '1.2rem',
 
                                 marginRight: '30px'
                             }}>WALK AROUND</button>

@@ -6,25 +6,18 @@ const userSchema = new Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   name: String,
-  birthday:  { type: Date },
+  birthday: { type: Date },
   gender: String,
-
-  
-  animal:String,
-  height:Number,
-  width:Number,
-
+  animal: String,
+  height: Number,
+  weight: Number,
+  area: String,
   lang: String,
-  aboutPet: String,
+  aboutMe: String,
   passwordHash: String,
   url: String,
 
-  // name: { type: String, required: true },
-  // birthday: { type: Date, required: true },
-  // gender: { type: String, required: true },
-  // postCode: { type: Number, required: true },
-  // passwordHash: String,
-  // imageUrl: { type: String, required: true },
+
 });
 
 

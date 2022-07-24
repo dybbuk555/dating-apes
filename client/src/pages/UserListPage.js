@@ -4,7 +4,6 @@ import UserCard from "./../components/UserCard";
 import { useContext } from "react";
 import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
-import bg0 from '../images/0000.png';
 
 
 
@@ -35,16 +34,12 @@ function UserListPage() {
 
 
     return (
-        // <div style={{ width: '100vw', height: '100vh', backgroundRepeat: 'no-repeat', backgroundImage: `url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658529437/third-project-bg/0000_jpafok.png))`, backgroundSize: 'cover' }}>
         <div className='UserList-1'>
             <Navbar />
 
 
-            <div>
-
-
+            <div className='UserList-2'>
                 {users?.map((user) => <UserCard key={user._id} user={user} />)}
-
             </div>
         </div>
     );

@@ -48,40 +48,31 @@
   padding-right: 2vw;
   height: 11vh;
 }
-.Navbar-2-1 > a > img{
-  height: 7vh; 
+
+.Navbar-2-1>a>img {
+  height: 7vh;
 }
 
 .Navbar-2-2 {
-  /* margin-left:800px; */
-  margin-left:-1.5vw;
-
+  margin-left: -1.5vw;
 }
+
 .Navbar-2-4 {
-  /* margin-left:800px; */
-  margin-left:55vw;
-  /* padding-right:-50px; */
+  margin-left: 55vw;
+}
+
+.Navbar-02-02 {
+  margin-left: 58vw;
 }
 
 
 
-
-
-
-
-.UserList-1 {
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658529437/third-project-bg/0000_jpafok.png);
-  background-size: cover;
-}
 
 .UserDetail-1 {
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
-  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658529437/third-project-bg/0000_jpafok.png);
+  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
   background-size: cover;
 }
 
@@ -120,10 +111,13 @@
 
 }
 
+
 .Signup-9-1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* padding-top: */
+  /* margin-top:1vh; */
   /* border:1px solid red; */
   /* align-items: center; */
   /* width: 25vw;
@@ -131,55 +125,186 @@
 
 }
 
-.Signup{
-  width:100vw;
+.Signup {
+  width: 100vw;
 }
 
 .Signup-9 {
   /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:flex-end */
+  align-items:flex-end;
   /* margin-top:100px auto auto auto; */
   margin: auto;
-  margin-top: 2vh;
-  ;
+  margin-top: 4vh;
   width: 25vw;
   /* border: 1px solid red; */
   padding: 10px 26px 48px 26px;
-  background-color: rgb(250, 205, 230);
+  /* background-color: rgb(250, 205, 230); */
+  /* background: rgb(255, 255, 255); */
+  /* background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(244, 205, 228, 1) 99%); */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(252, 242, 248, 1) 9%, rgba(250, 232, 243, 1) 28%, rgba(246, 208, 232, 1) 78%, rgba(244, 200, 228, 1) 100%, rgba(244, 205, 228, 1) 100%);
+  height: auto;
 }
 
-input{
+.container-Signup-9-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 15vw;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* width:20px; */
+}
+
+.container-inner-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* width:20px; */
+}
+
+
+
+
+input {
   padding: 6px;
   /* padding-bottom:10px; */
   margin-top: 2px;
   margin-bottom: 6px;
   border: 0px;
   /* font-size: 2rem; */
-  border-top-right-radius:10px;
+  /* border-top-right-radius:10px; */
 }
 
-select{
+select {
   padding: 6px;
   /* padding-bottom:10px; */
   margin-top: 2px;
   margin-bottom: 6px;
   border: 0px;
   /* font-size: 2rem; */
-  border-top-right-radius:10px;
+  /* border-top-right-radius: 10px; */
 
 }
 
-.Signup-9-1 > button {
+.Signup-9-1>button {
   padding: 5px;
   /* padding-bottom:10px; */
   /* margin-top:2px; */
   /* margin-bottom: 6px; */
   border: 0px;
   padding: 8px 8px;
-  background-color: rgba(212, 82, 114, 0.314);
+  background-color: rgba(238, 153, 203, 0.682);
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+
+.Signup-9-Login {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-end;
+  /* margin-top:100px auto auto auto; */
+  margin: auto;
+  margin-top: 4vh;
+  width: 25vw;
+  /* border: 1px solid red; */
+  padding: 10px 26px 48px 26px;
+  /* background-color: rgb(250, 205, 230); */
+  /* background: rgb(255, 255, 255); */
+  /* background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(244, 205, 228, 1) 99%); */
+  /* background: rgb(255, 255, 255); */
+  /* background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(252, 242, 248, 1) 9%, rgba(250, 232, 243, 1) 28%, rgba(246, 208, 232, 1) 78%, rgba(244, 200, 228, 1) 100%, rgba(244, 205, 228, 1) 100%); */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(252, 242, 248, 1) 45%, rgba(250, 232, 243, 1) 75%, rgba(246, 208, 232, 1) 100%, rgba(244, 200, 228, 1) 100%, rgba(244, 205, 228, 1) 100%);
+  height: auto;
+}
+
+.Login-bottom-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  /* width: vw; */
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+.UserCard {
+  width: 18vw;
+  border: 1.5px solid gray;
+  border-radius: 16px;
+  margin-bottom: 2vh;
+
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 8px 10px;
+
+
+}
+
+.UserCard-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Quicksand';
+  font-weight: lighter;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  /* color: rgb(29, 192, 176); */
+  color: rgb(156, 83, 133);
+
+  /* text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black; */
+}
+
+.UserCard>h3 {
+  /* color: rgb(123, 244, 232); */
+  color: rgb(156, 83, 133);
+
+
+}
+
+.UserCard-img {
+  height: 18vw;
+  width: 18vw;
+  object-fit: cover;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+
+
+}
+
+
+.UserList-1 {
+  width: 100vw;
+  /* height: 100vh; */
+  /* background-repeat: repeat; */
+  background-repeat: repeat-x;
+
+  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
+  /* background-size: cover; */
+}
+
+
+.UserList-2 {
+  width: 88vw;
+  /* padding-left: 6vw;
+  padding-right: 6vw; */
+  margin:auto;
+
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 3vw;
+  margin-top: 2vh;
 }
