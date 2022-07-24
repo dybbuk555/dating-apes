@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import WebFont from 'webfontloader';
+import locationIcon from './../images/location.png'
+
 
 function UserCard({ user }) {
+    //字體設定
+    useEffect(() => {
+        WebFont.load({
+            google: {
+                families: ['Quicksand', 'Cantarell']
+            }
+        });
+    }, []);
+
     //注意解構obj的方式
-    const { email, name, birthday, gender, postCode, _id, url } = user
+    const { email, name, birthday, gender, postCode, _id, url, area } = user
 
     const [age, setAge] = useState(0)
 
@@ -18,13 +30,30 @@ function UserCard({ user }) {
 
 
     return (
-        <div>
+        <div >
 
             {/* 照片跟名字跟年紀 */}
-            <Link to={`/users/${_id}`}>
-                    <img src={url} style={{ height: '200px',width: '200px', objectFit: 'cover' }}/>
+            <Link to={`/users/${_id}`} className="UserCard-link" >
+                <div className="UserCard">
+                    <img src={url} className="UserCard-img" />
+                    <div style={{ paddingLeft:'1vw',marginTop:'-1vh' }}>
+                        <h3>{name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase()},&nbsp;{age}y</h3>
+                        <div style={{
+                            display: 'flex',
+                            alignItem: 'center',
+                            // justifyContent: 'center',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            marginTop: '-5vh'
+                        }}>
 
-                <h3>{name},{age}</h3>
+
+                            <img src={locationIcon} style={{ height: '2vh', paddingRight: '0.8vw' }} />
+
+                            <h4>{area}</h4>
+                        </div>
+                    </div>
+                </div>
             </Link >
 
 

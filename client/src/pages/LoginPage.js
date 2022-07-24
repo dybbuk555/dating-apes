@@ -1,8 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
+import WebFont from 'webfontloader';
+
 
 
 
@@ -11,6 +13,14 @@ const API_URL = "http://localhost:5005";
 
 
 function LoginPage(props) {
+  //字體設定
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Quicksand']
+      }
+    });
+  }, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
@@ -45,23 +55,38 @@ function LoginPage(props) {
 
   return (
 
-    <div className="LoginPage">
+    <div style={{ fontFamily: 'Quicksand' }}>
 
       <Navbar />
-      <h1>Login</h1>
-      <form onSubmit={handleLoginSubmit}>
-        <label>EMAIL:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
 
-        <label>PASSWORD:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
+      <form className='Signup-9-Login' onSubmit={handleLoginSubmit}>
+        <h3>Let's find someone for your pet &nbsp; ٩(^ᴗ^)۶ </h3>
+        {/* <h3>Let's find something for your pet ٩(✿∂‿∂✿)۶</h3> */}
 
-        <button type="submit">LOGIN</button>
+        <div className='Signup-9-1'>
+
+          <label>email :</label>
+          <input type="email" name="email" value={email} onChange={handleEmail} />
+        </div>
+
+        <div className='Signup-9-1'>
+          <label>password :</label>
+          <input type="password" name="password" value={password} onChange={handlePassword} />
+        </div>
+
+
+        <div className='Signup-9-1'>
+          <button style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >LOGIN</button>
+        </div>
+
+
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Don't you have an account yet?</p>
-      <Link to={"/signup"}> SIGN UP</Link>
+      <div className='Login-bottom-text' >
+        <p>Don't you have an account yet?&nbsp;&nbsp;&nbsp;</p>
+        <Link to={"/signup"}> SIGN UP</Link>
+      </div>
     </div>
   )
 }

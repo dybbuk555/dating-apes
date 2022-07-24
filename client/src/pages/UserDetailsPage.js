@@ -62,9 +62,9 @@ function UserDetailsPage(props) {
             <p>Gender:{user.gender}</p>
             <p>Birthday:{user.birthday.slice(0, 10)}</p>
             <p>Height:{user.height}</p>
-            <p>Width:{user.width}</p>
+            <p>Width:{user.weight}</p>
             <p>LANGUAGE:{user.lang}</p>
-            <p>About Me:{user.aboutPet}</p>
+            <p>About Me:{user.aboutMe}</p>
           </div>
         </div>
       )}

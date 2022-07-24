@@ -9,7 +9,8 @@ const saltRounds = 10;
 
 // POST  註冊授權
 router.post('/signup', (req, res, next) => {
-  const { email, password, name, birthday, gender, postCode, animal, height, width,url } = req.body;
+  const { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url } = req.body;
+
 
   console.log(req.body)
   if (email === '' || password === '') {
@@ -27,14 +28,14 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, name, birthday, gender, postCode, animal, height, width,url, password: hashedPassword });
+      return User.create({ email, password: hashedPassword, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, });
     })
     .then((createdUser) => {
       // const { email, password, name, birthday, gender, postCode } = createdUser;
-      const { email, password, name, birthday, gender, postCode, animal, height, width, url, _id } = createdUser;
+      const { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, _id } = createdUser;
 
 
-      const user = { email, password, name, birthday, gender, postCode, animal, height, width, url, _id };
+      const user = { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, _id };
 
 
       res.status(201).json({ user: user });
@@ -88,16 +89,11 @@ router.post('/login', (req, res, next) => {
 });
 
 
-
 // GET  驗證授權
 router.get('/verify', isAuthenticated, (req, res, next) => {
   console.log(`req.payload`, req.payload);
   res.status(200).json(req.payload);
 });
-
-
-
-
 
 
 module.exports = router;
