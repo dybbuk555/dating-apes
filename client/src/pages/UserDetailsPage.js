@@ -47,9 +47,11 @@ function UserDetailsPage(props) {
     getUser();
   }, []);
 
-
+  // console.log(user.messages)
   return (
-    <div className='UserDetail-1' style={{ fontFamily: 'Quicksand' }}>
+    // <div className='UserDetail-1' style={{ fontFamily: 'Quicksand' }}>
+    <div className='UserList-1' style={{ fontFamily: 'Quicksand' }}>
+
       <Navbar />
 
       {user && (
@@ -69,10 +71,10 @@ function UserDetailsPage(props) {
             <p>About Me:{user.aboutMe}</p>
           </div>
 
-          <AddAText refreshUser={getUser}  userId={userId} />
+          <AddAText refreshUser={getUser} userId={userId} />
 
 
-          { user && user.messages.map((message) => <MessageCard key={message._id} {...message} /> )} 
+          {user && user.messages.map((message) => <MessageCard key={message._id} {...message} />)}
 
         </div>
       )}
