@@ -57,7 +57,8 @@ function UserDetailsPage(props) {
           </div>
 
           <div className='UserDetail-2-2'>
-            <h1>{user.name}</h1>
+
+            <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
             <p>Type:{user.animal}</p>
             <p>Gender:{user.gender}</p>
             <p>Birthday:{user.birthday.slice(0, 10)}</p>

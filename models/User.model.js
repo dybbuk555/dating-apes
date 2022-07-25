@@ -16,8 +16,7 @@ const userSchema = new Schema({
   aboutMe: String,
   passwordHash: String,
   url: String,
-
-
+  messages: [ { type: Schema.Types.ObjectId, ref: 'Message' } ]
 });
 
 
