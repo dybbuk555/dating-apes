@@ -3,6 +3,8 @@ const router = express.Router();
 const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
+const Message = require("../models/Message.model");
+
 
 
 
@@ -29,12 +31,18 @@ router.get("/users/:userId", (req, res, next) => {
         res.status(400).json({ message: "Specified id is not valid" });
         return;
     }
+    // console.log('what is ', userId)
+
 
     // Each Project document has `tasks` array holding `_id`s of Task documents
     // We use .populate() method to get swap the `_id`s for the actual Task documents
     User.findById(userId)
-        // .populate("tasks")
+        //為什麼不是message or Message????因為user model 裡面是messages
+
+        .populate("messages")
         .then((user) => {
+            
+            console.log('what is ', user)
 
             res.status(200).json(user)
         })

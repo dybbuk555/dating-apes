@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import WebFont from 'webfontloader';
+import AddAText from "../components/AddAText";
+import MessageCard from "../components/MessageCard";
 
 
 
@@ -57,7 +59,6 @@ function UserDetailsPage(props) {
           </div>
 
           <div className='UserDetail-2-2'>
-
             <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
             <p>Type:{user.animal}</p>
             <p>Gender:{user.gender}</p>
@@ -67,6 +68,12 @@ function UserDetailsPage(props) {
             <p>LANGUAGE:{user.lang}</p>
             <p>About Me:{user.aboutMe}</p>
           </div>
+
+          <AddAText refreshUser={getUser}  userId={userId} />
+
+
+          { user && user.messages.map((message) => <MessageCard key={message._id} {...message} /> )} 
+
         </div>
       )}
 

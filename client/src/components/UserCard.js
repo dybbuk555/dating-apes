@@ -15,7 +15,7 @@ function UserCard({ user }) {
     }, []);
 
     //注意解構obj的方式
-    const { email, name, birthday, gender, postCode, _id, url, area } = user
+    const { email, name, birthday, gender, _id, url, area } = user
 
     const [age, setAge] = useState(0)
 

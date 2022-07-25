@@ -4,9 +4,14 @@ const router = require("express").Router();
 const Message = require('../models/Message.model');
 const User = require('../models/User.model');
 
-//  POST /api/tasks  -  Creates a new task
+//  POST /api/messages  -  Creates a new message
 router.post('/messages', (req, res, next) => {
     const { aText, userId } = req.body;
+
+   
+
+
+    console.log('check:',req.body)
 
     Message.create({ aText, userId })
         .then(newMessage => {
