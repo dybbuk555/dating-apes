@@ -53,13 +53,24 @@
   height: 7vh;
 }
 
+
+.Navbar-2-4 {
+  margin-left: 40vw;
+}
+
 .Navbar-2-2 {
+  margin-left: -1.8vw;
+}
+
+.Navbar-2-5 {
   margin-left: -1.5vw;
 }
 
-.Navbar-2-4 {
-  margin-left: 55vw;
+.Navbar-2-6 {
+  margin-left: -1.8vw;
 }
+
+
 
 .Navbar-02-02 {
   margin-left: 58vw;
@@ -241,13 +252,13 @@ select {
 
 .UserCard-link {
   text-decoration: none;
-  /* color: black; */
+  color: black;
   font-family: 'Quicksand';
   font-weight: lighter;
   font-size: 1.3rem;
   letter-spacing: 1.5px;
   /* color: rgb(29, 192, 176); */
-  color: rgb(156, 83, 133);
+  /* color: rgb(156, 83, 133); */
 
   /* text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black; */
 }

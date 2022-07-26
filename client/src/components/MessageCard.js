@@ -1,11 +1,28 @@
-function MessageCard({message}) {
+import { AuthContext } from "./../context/auth.context";
+import { useContext } from "react";
 
-console.log('檢查message in message card', message)
+
+function MessageCard({ message }) {
+
+    const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+
+
+    console.log('檢查 user ', { user })
+
+    console.log('檢查message', { message })
+
 
     return (
         <div>
-            {/* <p> {props.message.aText}&nbsp;sent by:&nbsp;{props.message.userSend}</p> */}
-            <p> {message.aText}&nbsp;sent by:&nbsp;{message.userSend.name}</p>
+
+            {user._id === message.userSend._id && (
+                <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase()+ message.userSend.name.slice(1).toLowerCase()}</a></p>
+                
+            )}
+
+            {user._id === message.userRecieve._id && (
+                <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase()+ message.userSend.name.slice(1).toLowerCase()}</a></p>
+            )}
 
         </div>
     );

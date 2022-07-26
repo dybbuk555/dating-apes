@@ -25,6 +25,7 @@ function UserDetailsPage(props) {
   const { userId } = useParams();
 
 
+
   const getUser = () => {
     // Get the token from the localStorage
     const storedToken = localStorage.getItem('authToken');
@@ -37,7 +38,7 @@ function UserDetailsPage(props) {
       )
       .then((response) => {
 
-        console.log('檢查response.data',response.data)
+        console.log('檢查response.data', response.data)
         const oneUser = response.data;
         setUser(oneUser);
       })
@@ -74,21 +75,31 @@ function UserDetailsPage(props) {
           <div className='UserDetail-3-2'>
             <div className='UserDetail-3-2-1'>
 
-              <p>About Me:{user.aboutMe}</p>
+              <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
+                <p>About Me</p>
+              </div>
+
+
+              <div style={{ backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1vw' }}>
+                <p>{user.aboutMe}</p>
+              </div>
+
+
             </div>
 
             <div className='UserDetail-3-2-2'>
 
-              <p>Type:{user.animal}</p>
-              <p>Gender:{user.gender}</p>
-              <p>Birthday:{user.birthday.slice(0, 10)}</p>
-              <p>Height:{user.height}</p>
-              <p>Width:{user.weight}</p>
-              <p>LANGUAGE:{user.lang}</p>
+              <p>Type:</p>
+              <p>{user.gender} | {user.animal}</p>
+              <p>{user.height} | {user.weight}</p>
+              <p>{user.lang} | {user.birthday.slice(0, 10)}</p>
+              <p>{user.area}  </p>
+
+
             </div>
           </div>
 
-          <AddAText refreshUser={getUser} userId={userId}/>
+          <AddAText refreshUser={getUser} userId={userId} />
 
 
           {user && user.messages.map((message) => <MessageCard key={message._id} message={message} />)}
