@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 import { useContext, useEffect } from "react";
 import { AuthContext } from "./../context/auth.context";
 import logoNavbar from '../images/logoNavbar.svg';
 import WebFont from 'webfontloader';
+
 
 
 
@@ -19,6 +21,9 @@ function Navbar() {
     // Subscribe to the AuthContext to gain access to
     // the values from AuthContext.Provider `value` prop
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+    // const { userId } = useParams();
+
+    // console.log('看看userId', user._id)
 
     return (
         <nav className='Navbar-0' style={{ fontFamily: 'Quicksand' }}>
@@ -95,6 +100,38 @@ function Navbar() {
 
                         </Link>
                     </div>
+
+                    {/* 我的檔案 */}
+                    <div className='Navbar-2-5'>
+                        <img
+                            src="https://res.cloudinary.com/dsy2gebem/image/upload/v1658843947/third-project-bg/Untitled-1-10_xgo2qo.png"
+                            style={{ height: '3.5vh' }} />
+                    </div>
+                    <div className='Navbar-2-6'>
+
+
+                        <Link to={`/users/${user._id}`}>
+                            <button style={{
+                                // backgroundColor: 'rgba(255,255,102,0.8)',
+                                backgroundColor: 'transparent',
+                                border: '1px solid yellow',
+                                border: 'none',
+                                padding: '8px 27px 8px 27px',
+                                // borderRadius: '3px',
+                                color: 'black',
+                                fontWeight: 'bold',
+                                letterSpacing: '-0.3px',
+                                fontSize: '1.2rem',
+                                marginRight: '30px'
+                            }}>
+                                MY FOOOOODS
+                            </button>
+
+
+                        </Link>
+                    </div>
+
+
                     <div className='Navbar-2-3'>
                         <button style={{
                             backgroundColor: 'Transparent',

@@ -3,8 +3,10 @@ const { Schema, model } = mongoose;
 
 
 const messageSchema = new Schema({
-  aText: String,
-  user:  { type: Schema.Types.ObjectId, ref: 'User' } 
+    aText: String,
+    userSend: { type: Schema.Types.ObjectId, ref: 'User' },
+    userRecieve: { type: Schema.Types.ObjectId, ref: 'User' }
+
 });
 
 

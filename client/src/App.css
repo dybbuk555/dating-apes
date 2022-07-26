@@ -53,13 +53,24 @@
   height: 7vh;
 }
 
+
+.Navbar-2-4 {
+  margin-left: 40vw;
+}
+
 .Navbar-2-2 {
+  margin-left: -1.8vw;
+}
+
+.Navbar-2-5 {
   margin-left: -1.5vw;
 }
 
-.Navbar-2-4 {
-  margin-left: 55vw;
+.Navbar-2-6 {
+  margin-left: -1.8vw;
 }
+
+
 
 .Navbar-02-02 {
   margin-left: 58vw;
@@ -68,20 +79,6 @@
 
 
 
-.UserDetail-1 {
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
-  background-size: cover;
-}
-
-.UserDetail-2 {
-  border-top: 0.7px solid gray;
-  /* font-family: 'Tangerine'; */
-  font-weight: lighter;
-  font-size: 1.2rem;
-}
 
 .Home-2-1 {
 
@@ -243,15 +240,14 @@ select {
 
 .UserCard {
   width: 18vw;
-  border: 1.5px solid gray;
-  border-radius: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
   margin-bottom: 2vh;
 
-  border: 1px solid;
+  /* border: 1px solid; */
   padding: 10px;
-  box-shadow: 8px 10px;
-
-
+  background-color: rgba(255, 255, 255, 0.3);
+  /* box-shadow: 8px 10px; */
 }
 
 .UserCard-link {
@@ -262,7 +258,7 @@ select {
   font-size: 1.3rem;
   letter-spacing: 1.5px;
   /* color: rgb(29, 192, 176); */
-  color: rgb(156, 83, 133);
+  /* color: rgb(156, 83, 133); */
 
   /* text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black; */
 }
@@ -270,6 +266,8 @@ select {
 .UserCard>h3 {
   /* color: rgb(123, 244, 232); */
   color: rgb(156, 83, 133);
+  /* margin:auto; */
+  /* margin-top: -10vh; */
 
 
 }
@@ -278,8 +276,8 @@ select {
   height: 18vw;
   width: 18vw;
   object-fit: cover;
-  border-top-left-radius: 11px;
-  border-top-right-radius: 11px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
 
 }
@@ -307,4 +305,21 @@ select {
   flex-wrap: wrap;
   gap: 3vw;
   margin-top: 2vh;
+}
+
+
+
+.UserDetail-1 {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
+  background-size: cover;
+}
+
+.UserDetail-2 {
+  /* border-top: 0.7px solid gray; */
+  /* font-family: 'Tangerine'; */
+  font-weight: lighter;
+  font-size: 1.2rem;
 }

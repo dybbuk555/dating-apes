@@ -4,16 +4,25 @@ const router = require("express").Router();
 const Message = require('../models/Message.model');
 const User = require('../models/User.model');
 
-//  POST /api/tasks  -  Creates a new task
+//  POST /api/messages  -  Creates a new message
 router.post('/messages', (req, res, next) => {
-    const { aText, userId } = req.body;
+    const { aText, userRecieve, userSend } = req.body;
 
-    Message.create({ aText, userId })
+    console.log('檢查後端！！！！', req.body)
+
+    Message.create({ aText, userRecieve, userSend })
+
+
         .then(newMessage => {
-            return User.findByIdAndUpdate(userId, { $push: { messages: newMessage._id } });
+            console.log('檢查newMessage！！！！', newMessage)
+
+            return User.findByIdAndUpdate(userRecieve, { $push: { messages: newMessage._id } });
         })
+
         .then(response => res.json(response))
         .catch(err => res.json(err));
 });
+
+
 
 module.exports = router;
