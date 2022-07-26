@@ -40,24 +40,24 @@ router.get("/users/:userId", (req, res, next) => {
     User.findById(userId)
         //為什麼不是message or Message????因為user model 裡面是messages
 
-        .populate('messages')
+        // .populate('messages')
         
-        // .populate({
-        //     path: 'messages',
-        //     populate: [{
-        //         path: 'userSend',
-        //         model: 'User'
-        //     },
-        //     {
-        //         path: 'userRecieve',
-        //         model: 'User'
+        .populate({
+            path: 'messages',
+            populate: [{
+                path: 'userSend',
+                model: 'User'
+            },
+            {
+                path: 'userRecieve',
+                model: 'User'
 
-        //     }]
-        // })
+            }]
+        })
 
         .then((user) => {
 
-            console.log('what is ', user)
+          //  console.log('what is ', user)
 
             res.status(200).json(user)
         })

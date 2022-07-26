@@ -1,10 +1,12 @@
-function MessageCard({ aText, userSend, user }) {
+function MessageCard({message}) {
 
-
+console.log('檢查message in message card', message)
 
     return (
         <div>
-            <p> {aText}&nbsp;sent by:&nbsp;{userSend}</p>
+            {/* <p> {props.message.aText}&nbsp;sent by:&nbsp;{props.message.userSend}</p> */}
+            <p> {message.aText}&nbsp;sent by:&nbsp;{message.userSend.name}</p>
+
         </div>
     );
 }

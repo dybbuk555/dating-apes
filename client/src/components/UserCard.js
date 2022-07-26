@@ -36,7 +36,7 @@ function UserCard({ user }) {
             <Link to={`/users/${_id}`} className="UserCard-link" >
                 <div className="UserCard">
                     <img src={url} className="UserCard-img" />
-                    <div style={{ paddingLeft:'1vw',marginTop:'-1vh' }}>
+                    <div style={{ paddingLeft:'1vw',marginTop:'-2vh' }}>
                         <h3>{name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase()},&nbsp;{age}y</h3>
                         <div style={{
                             display: 'flex',
@@ -44,13 +44,14 @@ function UserCard({ user }) {
                             // justifyContent: 'center',
                             flexDirection: 'row',
                             alignItems: 'center',
-                            marginTop: '-5vh'
+                            marginTop: '-6.6vh',
+                            marginBottom:'-2vh'
                         }}>
 
 
-                            <img src={locationIcon} style={{ height: '2vh', paddingRight: '0.8vw' }} />
+                            <img src={locationIcon} style={{ height: '1.8vh', paddingRight: '0.8vw' }} />
 
-                            <h4>{area}</h4>
+                            <h5>{area}</h5>
                         </div>
                     </div>
                 </div>

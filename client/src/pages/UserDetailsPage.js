@@ -10,8 +10,9 @@ import MessageCard from "../components/MessageCard";
 
 const API_URL = "http://localhost:5005";
 
-
 function UserDetailsPage(props) {
+
+
   //字體設定
   useEffect(() => {
     WebFont.load({
@@ -35,6 +36,8 @@ function UserDetailsPage(props) {
         { headers: { Authorization: `Bearer ${storedToken}` } }
       )
       .then((response) => {
+
+        console.log('檢查response.data',response.data)
         const oneUser = response.data;
         setUser(oneUser);
       })
@@ -56,25 +59,39 @@ function UserDetailsPage(props) {
 
       {user && (
         <div className='UserDetail-2'>
-          <div className='UserDetail-2-1'>
-            <img src={user.url} style={{ height: '350px', width: '500px', objectFit: 'cover' }} />
+          {/* <div className='UserDetail-2-1'> */}
+          <div className='UserDetail-3-1'>
+            <div className='UserDetail-3-1-1'>
+              <img src={user.url} style={{ height: '350px', width: '500px', objectFit: 'cover' }} />
+            </div>
+            <div className='UserDetail-3-1-2'>
+              <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
+            </div>
+
           </div>
 
-          <div className='UserDetail-2-2'>
-            <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
-            <p>Type:{user.animal}</p>
-            <p>Gender:{user.gender}</p>
-            <p>Birthday:{user.birthday.slice(0, 10)}</p>
-            <p>Height:{user.height}</p>
-            <p>Width:{user.weight}</p>
-            <p>LANGUAGE:{user.lang}</p>
-            <p>About Me:{user.aboutMe}</p>
+          {/* <div className='UserDetail-2-2'> */}
+          <div className='UserDetail-3-2'>
+            <div className='UserDetail-3-2-1'>
+
+              <p>About Me:{user.aboutMe}</p>
+            </div>
+
+            <div className='UserDetail-3-2-2'>
+
+              <p>Type:{user.animal}</p>
+              <p>Gender:{user.gender}</p>
+              <p>Birthday:{user.birthday.slice(0, 10)}</p>
+              <p>Height:{user.height}</p>
+              <p>Width:{user.weight}</p>
+              <p>LANGUAGE:{user.lang}</p>
+            </div>
           </div>
 
-          <AddAText refreshUser={getUser} userId={userId} />
+          <AddAText refreshUser={getUser} userId={userId}/>
 
 
-          {user && user.messages.map((message) => <MessageCard key={message._id} {...message} />)}
+          {user && user.messages.map((message) => <MessageCard key={message._id} message={message} />)}
 
         </div>
       )}
@@ -83,5 +100,7 @@ function UserDetailsPage(props) {
     </div >
   );
 }
+
+
 
 export default UserDetailsPage;
