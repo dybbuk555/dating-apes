@@ -135,7 +135,7 @@ function SignupPage(props) {
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>
-              <option value="notSure">not sure</option>
+              {/* <option value="notSure">not sure</option> */}
               {/* <option value="default" selected>Choose..</option> */}
             </select>
           </div>
@@ -149,14 +149,14 @@ function SignupPage(props) {
               <option value="bird">bird</option>
               <option value="cat">cat</option>
               <option value="dog">dog</option>
-              <option value="elephant">elephant</option>
+              {/* <option value="elephant">elephant</option> */}
               <option value="fish">fish</option>
               <option value="hedgehog">hedgehog</option>
               <option value="monkey">monkey</option>
               <option value="rabbit">rabbit</option>
               <option value="squirrel">squirrel</option>
               <option value="tiger">tiger</option>
-              <option value="other">other    ༼ •̀ ں •́ ༽</option>
+              {/* <option value="other">other    ༼ •̀ ں •́ ༽</option> */}
             </select>
           </div>
 

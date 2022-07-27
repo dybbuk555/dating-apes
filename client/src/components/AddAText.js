@@ -23,10 +23,6 @@ function AddAText(props) {
 
         const requestBody = { aText, userRecieve: props.userId, userSend: user._id };
 
-        // console.log('檢查',requestBody)
-
-        //應該長得像這樣
-        // const requestBody = { aText, userRecieve: userId, userSend: user._id };
 
         //這裡要再授權一次
         const storedToken = localStorage.getItem('authToken');
@@ -55,7 +51,6 @@ function AddAText(props) {
                     value={aText}
                     onChange={(e) => setAText(e.target.value)}
                 />
-                {/* <p>{userSend}</p> */}
 
                 <button type="submit">SEND</button>
             </form>

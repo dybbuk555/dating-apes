@@ -16,12 +16,48 @@ function MessageCard({ message }) {
         <div>
 
             {user._id === message.userSend._id && (
-                <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase()+ message.userSend.name.slice(1).toLowerCase()}</a></p>
-                
-            )}
+                // <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase() + message.userSend.name.slice(1).toLowerCase()}</a></p>
+                <div className="sent-by">
+
+                <div>
+                    <h3> {message.aText}</h3>
+                </div>
+                <div>
+
+                    <p>sent by&nbsp;&nbsp;
+
+                        <a href={message.userSend._id}>
+                            <img src={message.userSend.url} style={{ borderRadius: '50%',  height: '4vw', width: '4vw', objectFit: 'cover' }} />
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+           
+           
+           
+           )}
 
             {user._id === message.userRecieve._id && (
-                <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase()+ message.userSend.name.slice(1).toLowerCase()}</a></p>
+                <div className="sent-by">
+
+                    <div className="sent-by-left">
+                        <h3> {message.aText}</h3>
+                    </div>
+
+                    <div className="sent-by-right">
+                        <p>sent by&nbsp;&nbsp;
+
+                            {/* <a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase() + message.userSend.name.slice(1).toLowerCase()}</a> */}
+                            <a href={message.userSend._id}>
+                                <img src={message.userSend.url} style={{ borderRadius: '50%', height: '4vw', width: '4vw', objectFit: 'cover' }} />
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
             )}
 
         </div>
@@ -30,9 +66,3 @@ function MessageCard({ message }) {
 
 export default MessageCard;
 
-
-// const messageSchema = new Schema({
-//     aText: String,
-//     userSend: { type: Schema.Types.ObjectId, ref: 'User' },
-//     userRecieve: { type: Schema.Types.ObjectId, ref: 'User' }
-// });

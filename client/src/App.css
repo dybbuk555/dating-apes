@@ -298,7 +298,7 @@ select {
   width: 88vw;
   /* padding-left: 6vw;
   padding-right: 6vw; */
-  margin:auto;
+  margin: auto;
 
   display: flex;
 
@@ -317,9 +317,94 @@ select {
   background-size: cover;
 }
 
+.UserDetail-1_5 {
+  margin-top: 3vh;
+  /* margin-bottom: 3vh; */
+  padding-bottom: 20vh;
+
+}
+
 .UserDetail-2 {
   /* border-top: 0.7px solid gray; */
   /* font-family: 'Tangerine'; */
   font-weight: lighter;
   font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  margin-left: 16vw;
+  margin-right: 16vw;
+
+}
+
+.UserDetail-3-1 {
+  width: 30.5vw;
+}
+
+.UserDetail-3-2 {
+  width: 30.5vw;
+}
+
+.UserDetail-4 {
+  font-weight: lighter;
+  font-size: 1.2rem;
+
+  display: flex;
+  /* justify-content:space-between; */
+  margin-left: 16vw;
+  margin-right: 16vw;
+  margin-top: 3.7vh;
+  /* border-top: 0.5px solid gray; */
+  border:1px solid black;
+  border-radius: 5px;
+
+  /* background-color: rgba(22, 239, 224, 0.263); */
+  background: rgb(5,36,0);
+  background: linear-gradient(60deg, rgba(5,36,0,0.22034751400560226) 8%, rgba(78,9,121,0.3295912114845938) 44%, rgba(0,255,211,0.186734068627451) 100%);
+}
+
+.UserDetail-4-1 {
+  width: 34.7vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.UserDetail-4-2 {
+  width: 30.5vw;
+  padding-left: 4vw;
+
+}
+
+.sent-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sent-by-1 {
+  display: flex;
+  justify-content: flex-start;
+  width: 10vw;
+}
+
+.sent-by-2 {
+  display: flex;
+  justify-content: flex-end;
+  width: 4vw;
+
+
+}
+
+
+.UserDetail-9-1{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+.UserDetail-9-2{
+ padding-left:1vw;
+margin-top:-0.7vh;
 }

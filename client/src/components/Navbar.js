@@ -110,7 +110,9 @@ function Navbar() {
                     <div className='Navbar-2-6'>
 
 
-                        <Link to={`/users/${user._id}`}>
+                        <a href={`/users/${user._id}`}>
+                        {/* <Link to={`/users/${user._id}`}> */}
+
                             <button style={{
                                 // backgroundColor: 'rgba(255,255,102,0.8)',
                                 backgroundColor: 'transparent',
@@ -128,7 +130,9 @@ function Navbar() {
                             </button>
 
 
-                        </Link>
+                        {/* </Link> */}
+                        </a>
+
                     </div>
 
 
