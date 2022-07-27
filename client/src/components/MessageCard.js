@@ -40,6 +40,10 @@ function MessageCard({ message }) {
            )}
 
             {user._id === message.userRecieve._id && (
+
+
+
+
                 <div className="sent-by">
 
                     <div className="sent-by-left">
@@ -58,6 +62,9 @@ function MessageCard({ message }) {
                     </div>
 
                 </div>
+                
+
+
             )}
 
         </div>

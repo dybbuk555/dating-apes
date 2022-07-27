@@ -105,11 +105,11 @@ function UserDetailsPage(props) {
               <div className='UserDetail-3-2-1'>
 
                 <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
-                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft:'0.3vw' }}>My self-summary</p>
+                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft: '0.3vw' }}>My self-summary</p>
                 </div>
 
 
-                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1.5vw',paddingRight:'1.5vw' }}>
+                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1.5vw', paddingRight: '1.5vw' }}>
                   <p>{user.aboutMe}</p>
                 </div>
 
@@ -119,7 +119,7 @@ function UserDetailsPage(props) {
               <div className='UserDetail-3-2-2'>
                 <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
 
-                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft:'0.3vw' }}>Details</p>
+                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft: '0.3vw' }}>Details</p>
                 </div>
                 <div style={{ backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1vw' }}>
 
@@ -178,6 +178,16 @@ function UserDetailsPage(props) {
               </div>
             </div>
           </div>
+
+
+          <div className='UserDetail-04' style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
+
+            <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft: '0.3vw' }}>Send messages</p>
+          </div>
+
+
+
+
           <div className='UserDetail-4'>
             <div className='UserDetail-4-1'>
               <AddAText refreshUser={getUser} userId={userId} />

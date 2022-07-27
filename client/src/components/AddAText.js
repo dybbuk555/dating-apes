@@ -40,19 +40,23 @@ function AddAText(props) {
 
 
     return (
-        <div className="AddTask">
-            <h3>Send messages</h3>
+        <div>
+            {/* <h3>Send messages</h3> */}
+            {/* <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
 
-            <form onSubmit={handleSubmit}>
-                <label>Text me?</label>
+                <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft: '0.3vw' }}>Send messages</p>
+            </div> */}
+            <form onSubmit={handleSubmit} className='AddAText-form'>
+                {/* <label>Text me?</label> */}
                 <input
                     type="text"
                     name="aText"
                     value={aText}
                     onChange={(e) => setAText(e.target.value)}
+                    className='AddAText-input'
                 />
 
-                <button type="submit">SEND</button>
+                <button type="submit" className='AddAText-btn'>SEND</button>
             </form>
         </div>
     );
