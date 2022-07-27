@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import WebFont from 'webfontloader';
 import AddAText from "../components/AddAText";
 import MessageCard from "../components/MessageCard";
+import ConvertZodiac from "../components/ConvertZodiac";
 
 
 
@@ -51,6 +52,33 @@ function UserDetailsPage(props) {
     getUser();
   }, []);
 
+
+
+  // //換成星座
+  // const [zodic, setZodic] = useState(0)
+
+  // //轉換星座的函數
+
+  // // const date = '2022-09-26T00:00:00.000+00:00';
+  // const findSign = (date) => {
+  //   const days = [21, 20, 21, 21, 22, 22, 23, 24, 24, 27, 23, 22];
+  //   const signs = ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"];
+  //   let month = Number(date.slice(5, 7));
+  //   let day = Number(date.slice(8, 10));
+  //   if (month == 0 && day <= 20) {
+  //     month = 11;
+  //   } else if (day < days[month]) {
+  //     month--;
+  //   };
+  //   return signs[month];
+  // };
+  // //
+  // useState(() => {
+  //   setZodic(findSign(props.birthday.toString()))
+  // }, [props.birthday])
+  // //
+
+
   // console.log(user.messages)
   return (
     // <div className='UserDetail-1' style={{ fontFamily: 'Quicksand' }}>
@@ -77,11 +105,11 @@ function UserDetailsPage(props) {
               <div className='UserDetail-3-2-1'>
 
                 <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
-                  <p style={{ margin: '0.5vh', fontSize: '1rem' }}>My self-summary</p>
+                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft:'0.3vw' }}>My self-summary</p>
                 </div>
 
 
-                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1vw' }}>
+                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1.5vw' }}>
                   <p>{user.aboutMe}</p>
                 </div>
 
@@ -91,7 +119,7 @@ function UserDetailsPage(props) {
               <div className='UserDetail-3-2-2'>
                 <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
 
-                  <p style={{ margin: '0.5vh', fontSize: '1rem' }}>Details</p>
+                  <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft:'0.3vw' }}>Details</p>
                 </div>
                 <div style={{ backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1vw' }}>
 
@@ -125,9 +153,11 @@ function UserDetailsPage(props) {
                         style={{ height: '3.5vh' }} />
                     </div>
                     <div className='UserDetail-9-2'>
-                      <p>{user.lang} | {user.birthday.slice(0, 10)}</p>
-
-                      
+                      <div className='UserDetail-9-2-1'>
+                        <p>{user.lang} | {user.birthday.slice(0, 10)}&nbsp;</p>
+                        {/* <ConvertZodiac 這裏必需指定props/> */}
+                        <ConvertZodiac birthday={user.birthday} />
+                      </div>
                     </div>
                   </div>
 
