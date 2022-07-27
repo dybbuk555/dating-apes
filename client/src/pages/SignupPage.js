@@ -131,7 +131,7 @@ function SignupPage(props) {
             <label>gender :</label>
             {/* <input type="text" name="gender" value={gender} onChange={handleGender} /> */}
             <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender}>
-              <option value="default" selected>choose...</option>
+              <option value="default" >choose...</option>
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>
@@ -144,7 +144,7 @@ function SignupPage(props) {
 
             <label>type :</label>
             <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" value={animal} onChange={handleAnimal}>
-              <option value="default" selected>animal...</option>
+              <option value="default" >animal...</option>
               <option value="ape">ape</option>
               <option value="bird">bird</option>
               <option value="cat">cat</option>
@@ -182,8 +182,8 @@ function SignupPage(props) {
           <div className='container-inner'>
 
             <label>area :</label>
-            <select style={{ width: '7.7vw', borderBottomLeftRadius: '10px', height: '2.85vh' }} name="area" value={area} onChange={handleArea}>
-              <option value="default" selected>choose...</option>
+            <select style={{ width: '7.7vw', borderBottomLeftRadius: '10px', height: '3.8vh' }} name="area" value={area} onChange={handleArea}>
+              <option value="default" >choose...</option>
               <option value="Charlottenburg">Charlottenburg</option>
               <option value="Friedrichshain">Friedrichshain</option>
               <option value="Kreuzberg">Kreuzberg</option>
@@ -208,11 +208,11 @@ function SignupPage(props) {
 
           <label>about me :</label>
 
-          {/* <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" placeholder="write something about your pet...">
+          <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" />
 
-          </textarea> */}
+          {/* </textarea> */}
 
-            <input  type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} />
+            {/* <input  type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} /> */}
 
 
         </div>
