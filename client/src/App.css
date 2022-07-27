@@ -403,8 +403,16 @@ select {
   flex-direction: row;
   justify-content:flex-start;
   align-items: center;
+  padding-left:0.5vw;
 }
 .UserDetail-9-2{
  padding-left:1vw;
 margin-top:-0.7vh;
+}
+.UserDetail-9-2-1{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+
 }
