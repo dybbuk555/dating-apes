@@ -27,7 +27,7 @@ function LoginPage(props) {
 
   const navigate = useNavigate();
 
-  const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, verifyStoredToken } = useContext(AuthContext);
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -44,14 +44,25 @@ function LoginPage(props) {
         console.log("JWT token", response.data.authToken);
 
         storeToken(response.data.authToken);
-        authenticateUser();
-        navigate("/users");
+        // authenticateUser();
+        //  navigate("/users");
+        verifyStoredToken()
+          .then(() => {
+            // redirect to projects
+            navigate('/users')
+          })
       })
       .catch((error) => {
         const errorDescription = error.response.data.message;
         setErrorMessage(errorDescription);
       })
   };
+
+
+
+
+
+
 
   return (
 
