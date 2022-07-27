@@ -131,7 +131,9 @@ function SignupPage(props) {
             <label>gender :</label>
             {/* <input type="text" name="gender" value={gender} onChange={handleGender} /> */}
             <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender}>
-              <option value="default" >choose...</option>
+
+              <option value="default">choose...</option>
+
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>
@@ -182,7 +184,9 @@ function SignupPage(props) {
           <div className='container-inner'>
 
             <label>area :</label>
+
             <select style={{ width: '7.7vw', borderBottomLeftRadius: '10px', height: '3.8vh' }} name="area" value={area} onChange={handleArea}>
+
               <option value="default" >choose...</option>
               <option value="Charlottenburg">Charlottenburg</option>
               <option value="Friedrichshain">Friedrichshain</option>
