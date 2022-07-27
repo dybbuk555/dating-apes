@@ -19,10 +19,10 @@ function MessageCard({ message }) {
                 // <p> {message.aText}&nbsp;sent by:&nbsp;<a href={message.userSend._id}>{message.userSend.name.slice(0, 1).toUpperCase() + message.userSend.name.slice(1).toLowerCase()}</a></p>
                 <div className="sent-by">
 
-                <div>
+                <div  className="sent-by-left">
                     <h3> {message.aText}</h3>
                 </div>
-                <div>
+                <div className="sent-by-right">
 
                     <p>sent by&nbsp;&nbsp;
 

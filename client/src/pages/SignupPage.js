@@ -154,7 +154,7 @@ function SignupPage(props) {
               <option value="hedgehog">hedgehog</option>
               <option value="monkey">monkey</option>
               <option value="rabbit">rabbit</option>
-              <option value="squirrel">squirrel</option>
+              <option value="raccoon">raccoon</option>
               <option value="tiger">tiger</option>
               {/* <option value="other">other    ༼ •̀ ں •́ ༽</option> */}
             </select>

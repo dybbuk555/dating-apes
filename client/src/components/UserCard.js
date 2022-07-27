@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import WebFont from 'webfontloader';
 import locationIcon from './../images/location.png'
+import MatchPer from "./MatchPer";
+
 
 
 function UserCard({ user }) {
@@ -30,20 +32,7 @@ function UserCard({ user }) {
         setAge(getAge(birthday.toString()))
     }, [birthday])
 
-//    function setAnimal(animal){
-//     if(animal === 'dog'){
-//         return '100%'
-//     }
 
-
-
-    // useState((animal) => {
-    //     setAnimal(
-    //         if(animal === 'dog')
-    //     )
-    // },'100%')
-
-//    }
 
     return (
         <div >
@@ -52,25 +41,37 @@ function UserCard({ user }) {
             <Link to={`/users/${_id}`} className="UserCard-link" >
                 <div className="UserCard">
                     <img src={url} className="UserCard-img" />
-                    <div style={{ paddingLeft: '1vw', marginTop: '-2vh' }}>
-                        <h3>{name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase()},&nbsp;{age}y</h3>
-                        <div style={{
-                            display: 'flex',
-                            alignItem: 'center',
-                            // justifyContent: 'center',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            marginTop: '-6.6vh',
-                            marginBottom: '-2vh'
-                        }}>
+                    <div>
+                        <div className="UserCard-1">
+                            <div className="UserCard-2-1">
+
+                                <div>
+
+                                    <h3 style={{marginTop:'1vh'}}>{name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase()},&nbsp;{age}y</h3>
+                                </div>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItem: 'center',
+                                    // justifyContent: 'center',
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    marginTop: '-6.6vh',
+                                    marginBottom: '-2vh'
+                                }}>
 
 
-                            <img src={locationIcon} style={{ height: '1.8vh', paddingRight: '0.8vw' }} />
+                                    <img src={locationIcon} style={{ height: '1.8vh', paddingRight: '0.8vw' }} />
 
-                            <h5>{area}</h5>
+                                    <h5>{area}</h5>
 
-                            <h5>{setAnimal}</h5>
+                                </div>
+                            </div>
 
+
+
+                            <div className="UserCard-2-2">
+                                <MatchPer />
+                            </div>
                         </div>
                     </div>
                 </div>

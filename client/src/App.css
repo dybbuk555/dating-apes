@@ -248,6 +248,41 @@ select {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.3);
   /* box-shadow: 8px 10px; */
+
+
+
+
+}
+
+.UserCard-1 {
+  display: flex;
+  /* justify-content: space-between; */
+  /* justify-content:last baseline; */
+
+  flex-direction: row;
+  align-items: center;
+}
+
+.UserCard-2-1 {
+  /* border:1px solid black; */
+  /* height:2vw; */
+  margin: auto
+}
+
+.UserCard-2-2 {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(94, 76, 215);
+  font-weight:bold;
+  height: 45px;
+  width: 45px;
+  background: linear-gradient(rgb(246, 221, 235), rgb(246, 221, 235)) padding-box,
+    linear-gradient(45deg, rgb(94, 76, 215), rgb(183, 223, 189)) border-box;
+  border: 2.8px solid transparent;
 }
 
 .UserCard-link {
@@ -355,12 +390,12 @@ select {
   margin-right: 16vw;
   margin-top: 3.7vh;
   /* border-top: 0.5px solid gray; */
-  border:1px solid black;
+  border: 1px solid black;
   border-radius: 5px;
 
   /* background-color: rgba(22, 239, 224, 0.263); */
-  background: rgb(5,36,0);
-  background: linear-gradient(60deg, rgba(5,36,0,0.22034751400560226) 8%, rgba(78,9,121,0.3295912114845938) 44%, rgba(0,255,211,0.186734068627451) 100%);
+  background: rgb(5, 36, 0);
+  background: linear-gradient(60deg, rgba(5, 36, 0, 0.22034751400560226) 8%, rgba(78, 9, 121, 0.3295912114845938) 44%, rgba(0, 255, 211, 0.186734068627451) 100%);
 }
 
 .UserDetail-4-1 {
@@ -383,36 +418,45 @@ select {
   align-items: center;
 }
 
+.sent-by-left {
+width: 18vw;
+}
+.sent-by-right {
+  padding-right:1vw;
+  }
+
 .sent-by-1 {
   display: flex;
   justify-content: flex-start;
-  width: 10vw;
+  /* width: 10vw; */
 }
 
 .sent-by-2 {
   display: flex;
   justify-content: flex-end;
-  width: 4vw;
+  /* width: 4vw; */
 
 
 }
 
 
-.UserDetail-9-1{
+.UserDetail-9-1 {
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
-  padding-left:0.5vw;
+  padding-left: 0.5vw;
 }
-.UserDetail-9-2{
- padding-left:1vw;
-margin-top:-0.7vh;
+
+.UserDetail-9-2 {
+  padding-left: 1vw;
+  margin-top: -0.7vh;
 }
-.UserDetail-9-2-1{
+
+.UserDetail-9-2-1 {
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
 
 }

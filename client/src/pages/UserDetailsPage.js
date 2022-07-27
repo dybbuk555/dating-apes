@@ -92,7 +92,7 @@ function UserDetailsPage(props) {
             {/* <div className='UserDetail-2-1'> */}
             <div className='UserDetail-3-1'>
               <div className='UserDetail-3-1-1'>
-                <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '55.3vh', width: '34.7vw', objectFit: 'cover' }} />
+                <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} />
               </div>
               {/* <div className='UserDetail-3-1-2'>
                 <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
@@ -109,7 +109,7 @@ function UserDetailsPage(props) {
                 </div>
 
 
-                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1.5vw' }}>
+                <div style={{ marginBottom: '4vh', backgroundColor: 'transparent', color: 'black', border: '1px solid black', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px', paddingLeft: '1.5vw',paddingRight:'1.5vw' }}>
                   <p>{user.aboutMe}</p>
                 </div>
 
