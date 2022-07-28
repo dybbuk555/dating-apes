@@ -7,9 +7,9 @@ function MessageCard({ message }) {
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
 
-    console.log('檢查 user ', { user })
+    // console.log('檢查 user ', { user })
 
-    console.log('檢查message', { message })
+    // console.log('檢查message', { message })
 
 
     return (

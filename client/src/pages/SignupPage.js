@@ -6,7 +6,8 @@ import WebFont from 'webfontloader';
 
 
 
-const API_URL = "http://localhost:5005";
+// const API_URL = "http://localhost:5005";
+const API_URL = "";
 
 
 function SignupPage(props) {

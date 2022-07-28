@@ -8,13 +8,13 @@ const User = require('../models/User.model');
 router.post('/messages', (req, res, next) => {
     const { aText, userRecieve, userSend } = req.body;
 
-    console.log('檢查後端！！！！', req.body)
+    // console.log('檢查後端！！！！', req.body)
 
     Message.create({ aText, userRecieve, userSend })
 
 
         .then(newMessage => {
-            console.log('檢查newMessage！！！！', newMessage)
+            // console.log('檢查newMessage！！！！', newMessage)
 
             return User.findByIdAndUpdate(userRecieve, { $push: { messages: newMessage._id } });
         })

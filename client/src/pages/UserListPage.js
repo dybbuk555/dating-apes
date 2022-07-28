@@ -7,7 +7,8 @@ import Navbar from "../components/Navbar";
 
 
 
-const API_URL = "http://localhost:5005";
+// const API_URL = "http://localhost:5005";
+const API_URL = "";
 
 
 function UserListPage() {

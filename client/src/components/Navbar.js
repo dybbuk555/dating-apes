@@ -36,7 +36,7 @@ function Navbar() {
                 <div className='Navbar-1'>
 
                     <div className='Navbar-2-1'>
-                        <a href="http://localhost:3000/">
+                        <a href="/">
                             <img src={logoNavbar} />
                         </a>
                     </div>
