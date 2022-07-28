@@ -33,6 +33,14 @@ const messageRouter = require('./routes/message.routes');    // <== IMPORT
 app.use('/api', messageRouter);  
 
 
+//發佈前要加上以下這些到最下面
+const path = require('path');
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.use((req, res) => {
+    // If no routes match, send them the React HTML.
+    res.sendFile(__dirname + "/client/build/index.html");
+  });
+
 
 require("./error-handling")(app);
 
