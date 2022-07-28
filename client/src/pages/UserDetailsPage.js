@@ -10,7 +10,6 @@ import ConvertZodiac from "../components/ConvertZodiac";
 
 
 // const API_URL = "http://localhost:5005";
-const API_URL = "";
 
 function UserDetailsPage(props) {
 
@@ -35,7 +34,7 @@ function UserDetailsPage(props) {
     // Send the token through the request "Authorization" Headers
     axios
       .get(
-        `${API_URL}/api/users/${userId}`,
+        `/api/users/${userId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }
       )
       .then((response) => {

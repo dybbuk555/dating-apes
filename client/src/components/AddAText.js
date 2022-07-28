@@ -7,7 +7,6 @@ import React from 'react';
 
 
 // const API_URL = "http://localhost:5005";
-const API_URL = "";
 
 
 function AddAText(props) {
@@ -31,7 +30,7 @@ function AddAText(props) {
 
         axios
             //這裡要再授權一次
-            .post(`${API_URL}/api/messages`, requestBody, { headers: { Authorization: `Bearer ${storedToken}` } })
+            .post(`/api/messages`, requestBody, { headers: { Authorization: `Bearer ${storedToken}` } })
 
             .then((response) => {
                 setAText("");

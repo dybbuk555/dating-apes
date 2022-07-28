@@ -7,7 +7,6 @@ import WebFont from 'webfontloader';
 
 
 // const API_URL = "http://localhost:5005";
-const API_URL = "";
 
 
 function SignupPage(props) {
@@ -76,7 +75,7 @@ function SignupPage(props) {
 
         const requestBody = { email, password, name, birthday, gender, lang, animal, height, weight, url: data.url, aboutMe, area };
 
-        axios.post(`${API_URL}/auth/signup`, requestBody)
+        axios.post(`/auth/signup`, requestBody)
           .then((response) => {
             navigate("/login");
           })
