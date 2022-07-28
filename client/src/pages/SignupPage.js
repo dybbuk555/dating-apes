@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import WebFont from 'webfontloader';
 
 
 
@@ -11,13 +10,7 @@ import WebFont from 'webfontloader';
 
 function SignupPage(props) {
   //字體設定
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Quicksand']
-      }
-    });
-  }, []);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");

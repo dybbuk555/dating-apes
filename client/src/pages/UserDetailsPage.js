@@ -2,7 +2,6 @@ import { useState, useEffect, Component } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import WebFont from 'webfontloader';
 import AddAText from "../components/AddAText";
 import MessageCard from "../components/MessageCard";
 import ConvertZodiac from "../components/ConvertZodiac";
@@ -15,13 +14,7 @@ function UserDetailsPage(props) {
 
 
   //字體設定
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Rampart One', 'Quicksand']
-      }
-    });
-  }, []);
+
   const [user, setUser] = useState(null);
   const { userId } = useParams();
 
