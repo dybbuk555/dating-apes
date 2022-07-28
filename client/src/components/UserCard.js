@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import WebFont from 'webfontloader';
 import locationIcon from './../images/location.png'
 import MatchPer from "./MatchPer";
 
@@ -8,13 +7,7 @@ import MatchPer from "./MatchPer";
 
 function UserCard({ user }) {
     //字體設定
-    useEffect(() => {
-        WebFont.load({
-            google: {
-                families: ['Quicksand', 'Cantarell']
-            }
-        });
-    }, []);
+ 
 
     //注意解構obj的方式
     const { email, name, birthday, _id, url, area } = user

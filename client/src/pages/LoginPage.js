@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
-import WebFont from 'webfontloader';
 
 
 // const API_URL = "http://localhost:5005";
@@ -11,13 +10,7 @@ import WebFont from 'webfontloader';
 
 function LoginPage(props) {
   //字體設定
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Quicksand']
-      }
-    });
-  }, []);
+ 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);

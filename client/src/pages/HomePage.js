@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./../context/auth.context";
 
-import { useEffect } from "react";
-import WebFont from 'webfontloader';
 import Navbar from "../components/Navbar";
 
 
@@ -11,13 +9,6 @@ function HomePage() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   //字體設定
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Rampart One', 'Quicksand']
-      }
-    });
-  }, []);
 
 
   return (

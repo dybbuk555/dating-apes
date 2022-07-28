@@ -3,20 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "./../context/auth.context";
 import logoNavbar from '../images/logoNavbar.svg';
-import WebFont from 'webfontloader';
 
 
 
 
 function Navbar() {
     //字體設定
-    useEffect(() => {
-        WebFont.load({
-            google: {
-                families: ['Quicksand']
-            }
-        });
-    }, []);
+
 
     // Subscribe to the AuthContext to gain access to
     // the values from AuthContext.Provider `value` prop
