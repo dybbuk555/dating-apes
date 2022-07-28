@@ -1,8 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-
 import { useContext, useEffect } from "react";
 import { AuthContext } from "./../context/auth.context";
-import logoNavbar from '../images/logoNavbar.svg';
+import logoNavbar from '../images/logoNavbar.png';
 
 
 
@@ -14,14 +13,15 @@ function Navbar() {
     // Subscribe to the AuthContext to gain access to
     // the values from AuthContext.Provider `value` prop
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
-    // const { userId } = useParams();
 
+    // const { userId } = useParams();
     // console.log('看看userId', user._id)
     // console.log('姓名？？？', user.email.toString().split('@')[0].toUpperCase(), `'s`)
 
 
     return (
-        <nav className='Navbar-0' style={{ fontFamily: 'Quicksand' }}>
+        <nav className='Navbar-0'>
+
 
             {/* 在非登入狀態中 可以前往查看的連結 */}
             {!isLoggedIn && (
@@ -30,7 +30,7 @@ function Navbar() {
 
                     <div className='Navbar-2-1'>
                         <a href="/">
-                            <img src={logoNavbar} />
+                            <img src={logoNavbar}  style={{ height: '7vh' }}/>
                         </a>
                     </div>
 

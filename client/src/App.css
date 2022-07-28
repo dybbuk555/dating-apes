@@ -3,7 +3,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rampart+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Quicksand:wght@300&family=Rampart+One&display=swap');
 
 .App-header {
   background-color: #282c34;
@@ -28,6 +28,7 @@
     transform: rotate(360deg);
   }
 }
+
 
 .Navbar-1 {
   display: flex;
