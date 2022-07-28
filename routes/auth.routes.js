@@ -9,26 +9,14 @@ const saltRounds = 10;
 
 // POST  註冊授權
 router.post('/signup', (req, res, next) => {
-  const { email, password, name, birthday, gender, postCode, animal, height, width } = req.body;
+  const { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url } = req.body;
+
 
   console.log(req.body)
   if (email === '' || password === '') {
     res.status(400).json({ message: "Please provide email and password" });
     return;
   }
-
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  // if (!emailRegex.test(email)) {
-  //   res.status(400).json({ message: 'Please provide a valid email address.' });
-  //   return;
-  // }
-
-  // Use regex to validate the password format
-  // const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  // if (!passwordRegex.test(password)) {
-  //   res.status(400).json({ message: 'Password must have at least 6 characters and contain at least one number, one lowercase and one uppercase letter.' });
-  //   return;
-  // }
 
   User.findOne({ email })
     .then((foundUser) => {
@@ -40,14 +28,14 @@ router.post('/signup', (req, res, next) => {
       const salt = bcrypt.genSaltSync(saltRounds);
       const hashedPassword = bcrypt.hashSync(password, salt);
 
-      return User.create({ email, name, birthday, gender, postCode, animal, height, width, password: hashedPassword });
+      return User.create({ email, password: hashedPassword, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, });
     })
     .then((createdUser) => {
       // const { email, password, name, birthday, gender, postCode } = createdUser;
-      const { email, password, name, birthday, gender, postCode, animal, height, width, _id } = createdUser;
+      const { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, _id } = createdUser;
 
 
-      const user = { email, password, name, birthday, gender, postCode, animal, height, width, _id };
+      const user = { email, password, name, birthday, gender, animal, height, weight, area, lang, aboutMe, url, _id };
 
 
       res.status(201).json({ user: user });
@@ -101,16 +89,11 @@ router.post('/login', (req, res, next) => {
 });
 
 
-
 // GET  驗證授權
 router.get('/verify', isAuthenticated, (req, res, next) => {
   console.log(`req.payload`, req.payload);
   res.status(200).json(req.payload);
 });
-
-
-
-
 
 
 module.exports = router;

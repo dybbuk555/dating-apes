@@ -29,7 +29,8 @@ app.use("/auth", authRouter);
 const userRouter = require("./routes/user.routes");
 app.use("/api", isAuthenticated, userRouter);
 
-
+const messageRouter = require('./routes/message.routes');    // <== IMPORT
+app.use('/api', messageRouter);  
 
 
 

@@ -1,61 +1,103 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./../context/auth.context";
+import Navbar from "../components/Navbar";
+import WebFont from 'webfontloader';
+
+
+
+
 
 const API_URL = "http://localhost:5005";
 
 
 function LoginPage(props) {
+  //字體設定
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Quicksand']
+      }
+    });
+  }, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
 
-  const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, verifyStoredToken } = useContext(AuthContext);
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
-  
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
 
     axios.post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
-        navigate("/users");
+        // navigate("/users");
 
         console.log("JWT token", response.data.authToken);
-        
+
         storeToken(response.data.authToken);
-        authenticateUser();
-        // navigate("/users");
+        // authenticateUser();
+        //  navigate("/users");
+        verifyStoredToken()
+          .then(() => {
+            // redirect to projects
+            navigate('/users')
+          })
       })
       .catch((error) => {
-      	const errorDescription = error.response.data.message;
-      	setErrorMessage(errorDescription);
-    	})
+        const errorDescription = error.response.data.message;
+        setErrorMessage(errorDescription);
+      })
   };
-  
+
+
+
+
+
+
+
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
 
-      <form onSubmit={handleLoginSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
+    <div style={{ fontFamily: 'Quicksand' }}>
 
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
+      <Navbar />
 
-        <button type="submit">Login</button>
+      <form className='Signup-9-Login' onSubmit={handleLoginSubmit}>
+        <h3>Let's find someone for your pet &nbsp; ٩(^ᴗ^)۶ </h3>
+        {/* <h3>Let's find something for your pet ٩(✿∂‿∂✿)۶</h3> */}
+
+        <div className='Signup-9-1'>
+
+          <label>email :</label>
+          <input type="email" name="email" value={email} onChange={handleEmail} />
+        </div>
+
+        <div className='Signup-9-1'>
+          <label>password :</label>
+          <input type="password" name="password" value={password} onChange={handlePassword} />
+        </div>
+
+
+        <div className='Signup-9-1'>
+          <button style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >LOGIN</button>
+        </div>
+
+
       </form>
-      { errorMessage && <p className="error-message">{errorMessage}</p> }
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Don't you have an account yet?</p>
-      <Link to={"/signup"}> Sign Up</Link>
+      <div className='Login-bottom-text' >
+        <p>Don't you have an account yet?&nbsp;&nbsp;&nbsp;</p>
+        <Link to={"/signup"}> SIGN UP</Link>
+      </div>
     </div>
   )
 }

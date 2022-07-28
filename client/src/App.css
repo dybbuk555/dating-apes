@@ -1,12 +1,3 @@
-/* .App {
-  text-align: center;
-} */
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +26,348 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Navbar-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 96vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: 11vh;
+}
+
+.Navbar-2-1>a>img {
+  height: 7vh;
+}
+
+
+.Navbar-2-4 {
+  margin-left: 40vw;
+}
+
+.Navbar-2-2 {
+  margin-left: -1.8vw;
+}
+
+.Navbar-2-5 {
+  margin-left: -1.5vw;
+}
+
+.Navbar-2-6 {
+  margin-left: -1.8vw;
+}
+
+.Navbar-02-02 {
+  margin-left: 58vw;
+}
+
+.Home-2-1 {
+  padding-left: 3vw;
+}
+
+.Home-2-2 {
+  padding-left: 3vw;
+}
+
+
+.Signup-9-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Signup {
+  width: 100vw;
+}
+
+.Signup-9 {
+  margin: auto;
+  margin-top: 4vh;
+  width: 25vw;
+  padding: 10px 26px 48px 26px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(252, 242, 248, 1) 9%, rgba(250, 232, 243, 1) 28%, rgba(246, 208, 232, 1) 78%, rgba(244, 200, 228, 1) 100%, rgba(244, 205, 228, 1) 100%);
+  height: auto;
+}
+
+.container-Signup-9-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 15vw;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container-inner-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+
+input {
+  padding: 6px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  border: 0px;
+}
+
+select {
+  padding: 6px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  border: 0px;
+}
+
+.Signup-9-1>button {
+  padding: 5px;
+  border: 0px;
+  padding: 8px 8px;
+  background-color: rgba(238, 153, 203, 0.682);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+
+.Signup-9-Login {
+  margin: auto;
+  margin-top: 4vh;
+  width: 25vw;
+  padding: 10px 26px 48px 26px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(252, 242, 248, 1) 45%, rgba(250, 232, 243, 1) 75%, rgba(246, 208, 232, 1) 100%, rgba(244, 200, 228, 1) 100%, rgba(244, 205, 228, 1) 100%);
+  height: auto;
+}
+
+.Login-bottom-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+.UserCard {
+  width: 18vw;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.UserCard-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.UserCard-2-1 {
+  margin: auto
+}
+
+.UserCard-2-2 {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(94, 76, 215);
+  font-weight:bold;
+  height: 45px;
+  width: 45px;
+  background: linear-gradient(rgb(246, 221, 235), rgb(246, 221, 235)) padding-box,
+    linear-gradient(45deg, rgb(94, 76, 215), rgb(183, 223, 189)) border-box;
+  border: 2.8px solid transparent;
+}
+
+.UserCard-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Quicksand';
+  font-weight: lighter;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+
+.UserCard>h3 {
+  color: rgb(156, 83, 133);
+}
+
+.UserCard-img {
+  height: 18vw;
+  width: 18vw;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+
+.UserList-1 {
+  width: 100vw;
+  background-repeat: repeat-x;
+  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
+}
+
+
+.UserList-2 {
+  width: 88vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  margin-top: 2vh;
+}
+
+
+
+.UserDetail-1 {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
+  background-size: cover;
+}
+
+.UserDetail-1_5 {
+  margin-top: 3vh;
+  padding-bottom: 20vh;
+
+}
+
+.UserDetail-2 {
+  font-weight: lighter;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  margin-left: 16vw;
+  margin-right: 16vw;
+
+}
+
+.UserDetail-3-1 {
+  width: 30.5vw;
+}
+
+.UserDetail-3-2 {
+  width: 30.5vw;
+}
+
+.UserDetail-4 {
+  font-weight: lighter;
+  font-size: 1.2rem;
+  display: flex;
+  margin-left: 16vw;
+  margin-right: 16vw;
+  border: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: rgb(5, 36, 0);
+  background: linear-gradient(60deg, rgba(5, 36, 0, 0.22034751400560226) 8%, rgba(78, 9, 121, 0.3295912114845938) 44%, rgba(0, 255, 211, 0.186734068627451) 100%);
+}
+
+.UserDetail-4-1 {
+  width: 40vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.UserDetail-04{
+  margin-left: 16vw;
+  margin-right: 16vw;
+  margin-top: 3.3vh;
+}
+
+.UserDetail-4-2 {
+  width: 35.5vw;
+  padding-left: 4vw;
+}
+
+.sent-by {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sent-by-left {
+width: 18vw;
+}
+.sent-by-right {
+  padding-right:1vw;
+  }
+
+.sent-by-1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sent-by-2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.UserDetail-9-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0.5vw;
+}
+
+.UserDetail-9-2 {
+  padding-left: 1vw;
+  margin-top: -0.7vh;
+}
+
+.UserDetail-9-2-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.AddAText-form{
+  /* border:1px solid red; */
+}
+.AddAText-input{
+  border:1px solid black;
+  background-color:rgba(66, 233, 88, 0.205);
+  width:25.3vw;
+  margin-left:1.5vw;
+  margin-top: 2.7vh;
+
+  margin-bottom: 2.7vh;
+  /* border-radius: 4px; */
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.AddAText-btn{
+  border:1px solid black;
+  background-color:rgb(0, 0, 0);
+  color:white;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  height:29.5px;
+  width: 6vw;
+
 }
