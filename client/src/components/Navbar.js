@@ -24,6 +24,8 @@ function Navbar() {
     // const { userId } = useParams();
 
     // console.log('看看userId', user._id)
+    // console.log('姓名？？？', user.email.toString().split('@')[0].toUpperCase(), `'s`)
+
 
     return (
         <nav className='Navbar-0' style={{ fontFamily: 'Quicksand' }}>
@@ -111,26 +113,23 @@ function Navbar() {
 
 
                         <a href={`/users/${user._id}`}>
-                        {/* <Link to={`/users/${user._id}`}> */}
-
+                            {/* <Link to={`/users/${user._id}`}> */}
+                            {user.name}
                             <button style={{
                                 // backgroundColor: 'rgba(255,255,102,0.8)',
                                 backgroundColor: 'transparent',
                                 border: '1px solid yellow',
                                 border: 'none',
                                 padding: '8px 27px 8px 27px',
-                                // borderRadius: '3px',
                                 color: 'black',
                                 fontWeight: 'bold',
                                 letterSpacing: '-0.3px',
                                 fontSize: '1.2rem',
                                 marginRight: '30px'
                             }}>
-                                MY FOOOOODS
+                                {user.email.toString().split('@')[0].toUpperCase()}'s FEEDS
                             </button>
-
-
-                        {/* </Link> */}
+                            {/* </Link> */}
                         </a>
 
                     </div>

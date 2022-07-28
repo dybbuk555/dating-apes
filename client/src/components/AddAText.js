@@ -41,11 +41,7 @@ function AddAText(props) {
 
     return (
         <div>
-            {/* <h3>Send messages</h3> */}
-            {/* <div style={{ backgroundColor: 'black', color: 'white', border: '1px solid black', borderTopLeftRadius: '5px', borderTopRightRadius: '5px', paddingLeft: '1vw' }}>
-
-                <p style={{ margin: '0.5vh', fontSize: '1rem', paddingLeft: '0.3vw' }}>Send messages</p>
-            </div> */}
+            
             <form onSubmit={handleSubmit} className='AddAText-form'>
                 {/* <label>Text me?</label> */}
                 <input

@@ -53,32 +53,6 @@ function UserDetailsPage(props) {
   }, []);
 
 
-
-  // //換成星座
-  // const [zodic, setZodic] = useState(0)
-
-  // //轉換星座的函數
-
-  // // const date = '2022-09-26T00:00:00.000+00:00';
-  // const findSign = (date) => {
-  //   const days = [21, 20, 21, 21, 22, 22, 23, 24, 24, 27, 23, 22];
-  //   const signs = ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"];
-  //   let month = Number(date.slice(5, 7));
-  //   let day = Number(date.slice(8, 10));
-  //   if (month == 0 && day <= 20) {
-  //     month = 11;
-  //   } else if (day < days[month]) {
-  //     month--;
-  //   };
-  //   return signs[month];
-  // };
-  // //
-  // useState(() => {
-  //   setZodic(findSign(props.birthday.toString()))
-  // }, [props.birthday])
-  // //
-
-
   // console.log(user.messages)
   return (
     // <div className='UserDetail-1' style={{ fontFamily: 'Quicksand' }}>
@@ -94,10 +68,6 @@ function UserDetailsPage(props) {
               <div className='UserDetail-3-1-1'>
                 <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} />
               </div>
-              {/* <div className='UserDetail-3-1-2'>
-                <h1>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()},&nbsp;{user.age}y</h1>
-              </div> */}
-
             </div>
 
             {/* <div className='UserDetail-2-2'> */}

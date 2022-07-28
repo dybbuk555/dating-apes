@@ -5,8 +5,6 @@ function ConvertZodiac({ birthday }) {
 
     const [zodic, setZodic] = useState(0)
 
-
-    // const date = '2022-09-26T00:00:00.000+00:00';
     const findSign = (date) => {
         const days = [21, 20, 21, 21, 22, 22, 23, 24, 24, 27, 23, 22];
         const signs = ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"];

@@ -58,16 +58,12 @@ function UserCard({ user }) {
                                     marginTop: '-6.6vh',
                                     marginBottom: '-2vh'
                                 }}>
-
-
                                     <img src={locationIcon} style={{ height: '1.8vh', paddingRight: '0.8vw' }} />
 
                                     <h5>{area}</h5>
 
                                 </div>
                             </div>
-
-
 
                             <div className="UserCard-2-2">
                                 <MatchPer />

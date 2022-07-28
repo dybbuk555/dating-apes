@@ -109,11 +109,6 @@ function SignupPage(props) {
           <input type="password" name="password" value={password} onChange={handlePassword} />
         </div>
 
-        {/* <div className='Signup-9-1'>
-          <label>name :</label>
-          <input type="text" name="name" value={name} onChange={handleName} />
-        </div> */}
-
         <div className='container-Signup-9-1'>
           <div className='container-inner'>
             <label>name :</label>
@@ -129,7 +124,6 @@ function SignupPage(props) {
           <div className='container-inner-3'>
 
             <label>gender :</label>
-            {/* <input type="text" name="gender" value={gender} onChange={handleGender} /> */}
             <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender}>
 
               <option value="default">choose...</option>
@@ -137,8 +131,6 @@ function SignupPage(props) {
               <option value="male">male</option>
               <option value="female">female</option>
               <option value="other">other</option>
-              {/* <option value="notSure">not sure</option> */}
-              {/* <option value="default" selected>Choose..</option> */}
             </select>
           </div>
 
@@ -213,10 +205,6 @@ function SignupPage(props) {
           <label>about me :</label>
 
           <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" />
-
-          {/* </textarea> */}
-
-            {/* <input  type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} /> */}
 
 
         </div>
