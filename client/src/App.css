@@ -3,6 +3,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Quicksand:wght@300&family=Rampart+One&display=swap');
 
 .App-header {
@@ -24,11 +25,11 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-
 
 .Navbar-1 {
   display: flex;
@@ -44,7 +45,6 @@
 .Navbar-2-1>a>img {
   height: 7vh;
 }
-
 
 .Navbar-2-4 {
   margin-left: 40vw;
@@ -117,9 +117,6 @@
   align-items: flex-start;
 }
 
-
-
-
 input {
   padding: 6px;
   margin-top: 2px;
@@ -143,7 +140,6 @@ select {
   font-weight: bold;
   font-size: 1.1rem;
 }
-
 
 .Signup-9-Login {
   margin: auto;
@@ -180,18 +176,36 @@ select {
 }
 
 .UserCard-2-1 {
-  margin: auto
+  margin: auto;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.UserCard-2-1-1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height:3vh;
+}
+
+.UserCard-2-1-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height:3vh;
 }
 
 .UserCard-2-2 {
   font-size: 1.2rem;
   border-radius: 50%;
-  margin: auto;
+  /* margin: auto; */
+  margin: 16px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(94, 76, 215);
-  font-weight:bold;
+  font-weight: bold;
   height: 45px;
   width: 45px;
   background: linear-gradient(rgb(246, 221, 235), rgb(246, 221, 235)) padding-box,
@@ -220,13 +234,11 @@ select {
   border-top-right-radius: 3px;
 }
 
-
 .UserList-1 {
   width: 100vw;
   background-repeat: repeat-x;
   background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
 }
-
 
 .UserList-2 {
   width: 88vw;
@@ -236,8 +248,6 @@ select {
   gap: 3vw;
   margin-top: 2vh;
 }
-
-
 
 .UserDetail-1 {
   width: 100vw;
@@ -256,7 +266,6 @@ select {
 .UserDetail-2 {
   font-weight: lighter;
   font-size: 1.2rem;
-
   display: flex;
   justify-content: space-between;
   margin-left: 16vw;
@@ -287,13 +296,12 @@ select {
 
 .UserDetail-4-1 {
   width: 40vw;
-
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
 
-.UserDetail-04{
+.UserDetail-04 {
   margin-left: 16vw;
   margin-right: 16vw;
   margin-top: 3.3vh;
@@ -311,11 +319,12 @@ select {
 }
 
 .sent-by-left {
-width: 18vw;
+  width: 18vw;
 }
+
 .sent-by-right {
-  padding-right:1vw;
-  }
+  padding-right: 1vw;
+}
 
 .sent-by-1 {
   display: flex;
@@ -326,7 +335,6 @@ width: 18vw;
   display: flex;
   justify-content: flex-end;
 }
-
 
 .UserDetail-9-1 {
   display: flex;
@@ -348,28 +356,24 @@ width: 18vw;
   align-items: center;
 }
 
-.AddAText-form{
-  /* border:1px solid red; */
-}
-.AddAText-input{
-  border:1px solid black;
-  background-color:rgba(66, 233, 88, 0.205);
-  width:25.3vw;
-  margin-left:1.5vw;
+.AddAText-input {
+  border: 1px solid black;
+  background-color: rgba(66, 233, 88, 0.205);
+  width: 25.3vw;
+  margin-left: 1.5vw;
   margin-top: 2.7vh;
-
   margin-bottom: 2.7vh;
-  /* border-radius: 4px; */
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-.AddAText-btn{
-  border:1px solid black;
-  background-color:rgb(0, 0, 0);
-  color:white;
+
+.AddAText-btn {
+  border: 1px solid black;
+  background-color: rgb(0, 0, 0);
+  color: white;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
-  height:29.5px;
+  height: 29.5px;
   width: 6vw;
 
 }

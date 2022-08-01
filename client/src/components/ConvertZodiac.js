@@ -1,10 +1,7 @@
 import { useState } from "react";
 
-
 function ConvertZodiac({ birthday }) {
-
     const [zodic, setZodic] = useState(0)
-
     const findSign = (date) => {
         const days = [21, 20, 21, 21, 22, 22, 23, 24, 24, 27, 23, 22];
         const signs = ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn"];
@@ -17,7 +14,6 @@ function ConvertZodiac({ birthday }) {
         };
         return signs[month];
     };
-    console.log(birthday)
 
     useState(() => {
         setZodic(findSign(birthday.toString()))
@@ -28,10 +24,6 @@ function ConvertZodiac({ birthday }) {
             | {zodic}
         </p>
     )
-
-
-
-
 }
 
 export default ConvertZodiac;
