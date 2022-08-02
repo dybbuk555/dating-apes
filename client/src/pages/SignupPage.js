@@ -70,17 +70,17 @@ function SignupPage(props) {
         <div className='container-Signup-9-1'>
           <div className='container-inner'>
             <label>name :</label>
-            <input style={{ width: '11.5vw', marginRight: '0.5vw', borderTopRightRadius: '10px' }} type="text" name="name" value={name} onChange={handleName} />
+            <input style={{ width: '11.5vw', marginRight: '0.5vw', borderTopRightRadius: '10px' }} type="text" name="name" value={name} onChange={handleName} required />
           </div>
           <div className='container-inner'>
             <label>birthday :</label>
-            <input style={{ padding: '3px', width: '11.8vw', textAlign: 'center', borderBottomLeftRadius: '10px' }} type="date" name="birthday" value={birthday} onChange={handleBirthday} />
+            <input style={{ padding: '3px', width: '11.8vw', textAlign: 'center', borderBottomLeftRadius: '10px' }} type="date" name="birthday" value={birthday} onChange={handleBirthday} required />
           </div>
         </div>
         <div className='container-Signup-9-1'>
           <div className='container-inner-3'>
             <label>gender :</label>
-            <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender}>
+            <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender} required>
               <option value="default">choose...</option>
               <option value="male">male</option>
               <option value="female">female</option>
@@ -89,7 +89,7 @@ function SignupPage(props) {
           </div>
           <div className='container-inner-3'>
             <label>type :</label>
-            <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" value={animal} onChange={handleAnimal}>
+            <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" value={animal} onChange={handleAnimal} required>
               <option value="default" >animal...</option>
               <option value="ape">ape</option>
               <option value="bird">bird</option>
@@ -106,7 +106,7 @@ function SignupPage(props) {
 
           <div className='container-inner-3'>
             <label>language :</label>
-            <input style={{ width: '7vw', borderBottomLeftRadius: '10px' }} type="text" name="lang" value={lang} onChange={handleLang} />
+            <input style={{ width: '7vw', borderBottomLeftRadius: '10px' }} type="text" name="lang" value={lang} onChange={handleLang} required />
           </div>
         </div>
 
@@ -114,12 +114,12 @@ function SignupPage(props) {
           <div className='container-inner'>
 
             <label>height (cm) :</label>
-            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} type="number" name="height" value={height} onChange={handleHeight} />
+            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} type="number" name="height" value={height} onChange={handleHeight} required />
           </div>
           <div className='container-inner'>
 
             <label>weight (kg) :</label>
-            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px', borderTopRightRadius: '10px' }} type="number" name="weight" value={weight} onChange={handleWeight} />
+            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px', borderTopRightRadius: '10px' }} type="number" name="weight" value={weight} onChange={handleWeight} required />
           </div>
           <div className='container-inner'>
 
@@ -151,13 +151,13 @@ function SignupPage(props) {
 
           <label>about me :</label>
 
-          <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" />
+          <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" required />
 
 
         </div>
         <div className='Signup-9-1'>
           <label>upload profile photo :</label>
-          <input type="file" onChange={(e) => setImage(e.target.files[0])}></input>
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} required></input>
         </div>
 
         <div className='Signup-9-1'>
