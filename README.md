@@ -25,50 +25,25 @@ Since dating apps become one of the mainstream tools for connecting human being,
   ```
 ## Requirements
 
-- Root folder
+- Promise based HTTP client - [axios](https://github.com/mzabriskie/axios)@0.27.2
+- Optimized bcrypt in plain JavaScript with zero dependencies - [bcryptjs](https://www.npmjs.com/package/bcryptjs)@2.4.3
+- Cloudinary NPM for node.js integration - [cloudinary](https://github.com/cloudinary/cloudinary_npm)@1.30.1
+- Effortlessly optimize and transform your cloud's assets - [cloudinary-react](https://www.npmjs.com/package/cloudinary-react)@1.8.1
+- Environment configuration - [dotenv](https://www.npmjs.com/package/dotenv)@16.0.1
+- Web framework for Node.js - [express](http://expressjs.com/)@4.18.1
+- JWT authentication middleware - [express-jwt](https://www.npmjs.com/package/express-jwt)@7.7.5
+- JSON Web Tokens (jwt) - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)@8.5.1
+- Mongoose MongoDB ODM - [mongoose](https://www.npmjs.com/package/mongoose)@6.4.5
+- JavaScript library for building user interfaces - [react](https://facebook.github.io/react/)@18.2.0
+- Declarative routing for React web applications - [react-router-dom](https://github.com/remix-run/react-router)@6.3.0
 
-  ```bash
-  bcryptjs@2.4.3
-  cloudinary@1.30.1
-  cookie-parser@1.4.6
-  cors@2.8.5
-  dotenv@16.0.1
-  xpress@4.18.1
-  express-jwt@7.7.5
-  jsonwebtoken@8.5.1
-  mongoose@6.4.5
-  morgan@1.10.0
-  ```
-  
-- Client folder
+## Stack 
 
-  ```bash
-  @testing-library/jest-dom@5.16.4
-  @testing-library/react@13.3.0
-  @testing-library/user-event@13.5.0
-  axios@0.27.2
-  cloudinary-react@1.8.1
-  react@18.2.0
-  react-dom@18.2.0
-  react-router-dom@6.3.0
-  react-scripts@5.0.1
-  web-vitals@2.1.4
-  ```
+- Frontend: React
+- Backend: Express and Node.js
+- Database: MongoDB 
+- Deployed on Heroku 
 
-## Frameworks
-
-- React
-
-- Express
-
-- Node
-
-- MongoDB
-
-- Heroku
-
-##
-
-Now you have it&nbsp;&nbsp;&nbsp;🎉&nbsp;&nbsp;&nbsp;🦍 
-
+## 
+Now you have it&nbsp;&nbsp;&nbsp;🎉&nbsp;&nbsp;&nbsp;🦍 <br>
 Thank you for reading and happy coding &nbsp;💚
