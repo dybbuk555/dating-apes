@@ -1,7 +1,7 @@
 <p align="right"><img src="https://user-images.githubusercontent.com/104759740/183436724-23c3129c-29c3-43c3-ac79-a02b0b320024.png" alt="datingApesLogo" height="100" /></p>
 
 # My Mission
-Since dating apps become one of the mainstream tools for connecting human being, but these apps still don't give any chance to our pets to make new friends. Pets are always used as human accessories or even as a method for dating. Therefore I created the app to serve the pets, all the user information is about the pets, not about his/her/its owner.<br>
+Since dating apps become one of the mainstream tools for connecting human being, but these apps still don't give any chance to our pets to make new friends.<br>Pets are always used as human accessories or even as a method for dating. Therefore I created the app to serve the pets, all the user information is about the pets, not about his/her/its owner.<br>
 <p align="center"><img width="900" alt="index" src="https://user-images.githubusercontent.com/104759740/183531361-a927f4b2-9792-4b0b-827c-592c1d4c21aa.png"></p>
 
 ## Setup
