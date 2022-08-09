@@ -23,6 +23,16 @@ Since dating apps become one of the mainstream tools for connecting human being,
   npm install
   npm start
   ```
+  
+- Create ```.env``` file with the following variables:
+  ```
+  MONGODB_URI
+  TOKEN_SECRET
+  CLOUDINARY_NAME
+  CLOUDINARY_API_KEY
+  CLOUDINARY_API_SECRET
+  ```
+
 ## NPM Packages
 
 - Promise based HTTP client - [axios](https://github.com/mzabriskie/axios)@0.27.2
