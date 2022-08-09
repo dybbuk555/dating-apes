@@ -23,7 +23,7 @@ Since dating apps become one of the mainstream tools for connecting human being,
   npm install
   npm start
   ```
-## Requirements
+## NPM Packages
 
 - Promise based HTTP client - [axios](https://github.com/mzabriskie/axios)@0.27.2
 - Optimized bcrypt in plain JavaScript with zero dependencies - [bcryptjs](https://www.npmjs.com/package/bcryptjs)@2.4.3
