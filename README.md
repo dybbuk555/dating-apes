@@ -10,7 +10,7 @@ Since dating apps become one of the mainstream tools for connecting human being,
 - Open the file and start:
 
   ```bash
-  cd third-project
+  cd dating-apes
   ```
   First install all npm package in root folder (backend) and run it: 
   ```bash
