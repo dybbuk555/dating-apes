@@ -31,12 +31,9 @@ function HomePage() {
         )}
       </div>
       <div className='Home-footer'>
-      <a href="https://github.com/WHL99/" target="_blank" style={{textDecoration:'none'}}>Wen-Hsuan Liao</a>
-        {/* <a href="https://github.com/WHL99/" target="_blank"> <img src="https://user-images.githubusercontent.com/104759740/183920897-60996034-c895-451e-a989-02121f10f14e.png" alt="gitHubIcon" height="20" /> </a> */}
-       <img src="https://user-images.githubusercontent.com/104759740/183930443-c716f496-ddcd-4f28-867e-758111ab38ac.png" alt="gitHubIcon" height="20" />
-        
+        <a href="https://github.com/WHL99/" target="_blank" style={{textDecoration:'none'}}>Wen-Hsuan Liao</a>
+        <img src="https://user-images.githubusercontent.com/104759740/183930443-c716f496-ddcd-4f28-867e-758111ab38ac.png" alt="gitHubIcon" height="20" />
       </div>
-
     </div>
   );
 }
