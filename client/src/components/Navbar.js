@@ -17,7 +17,7 @@ function Navbar() {
                     </div>
 
                     <div className='Navbar-02-02'>
-                        <p>Already hadve an account?</p>
+                        <p>Already have an account?</p>
                     </div>
 
                     <div className='Navbar-02-03'>
