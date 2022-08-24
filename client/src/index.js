@@ -5,6 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { AuthProviderWrapper } from "./context/auth.context";
+import axios from 'axios';
+
+if (process.env.NODE_ENV === "development"){
+  axios.defaults.baseURL = 'http://localhost:5006';
+} else {
+  axios.defaults.baseURL = 'https://dating-apes.herokuapp.com';
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

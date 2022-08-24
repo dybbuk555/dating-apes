@@ -10,7 +10,7 @@ function SignupPage(props) {
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
   const [lang, setLang] = useState('');
-  const [animal, setAnimal] = useState("");
+  const [animal, setAnimal] = useState();
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
   const [aboutMe, setAboutMe] = useState('');
@@ -35,7 +35,7 @@ function SignupPage(props) {
     data.append("file", image)
     data.append("upload_preset", "third-project")
     data.append("cloud_name", "dsy2gebem")
-    fetch("  https://api.cloudinary.com/v1_1/dsy2gebem/image/upload", {
+    fetch("https://api.cloudinary.com/v1_1/dsy2gebem/image/upload", {
       method: "post",
       body: data
     })
@@ -53,6 +53,29 @@ function SignupPage(props) {
       })
       .catch(err => console.log(err))
   }
+
+  const genders = ["choose...", "male", "female", "other"]
+  const genderOptions = genders.map((gender) => {
+    return (
+      <option key={gender} value={`${gender}`}>{gender}</option>
+    )
+  });
+
+
+  const animals = ["choose the animal...", "ape", "bird", "cat", "dog", "fish", "hedgehog", "monkey", "rabbit", "raccoon", "tiger"]
+  const animalOptions = animals.map((animal) => {
+    return (
+      <option key={animal} value={`${animal}`}>{animal}</option>
+    )
+  });
+
+  const areas = ["choose...", "Charlottenburg", "Friedrichshain", "Kreuzberg", "Lichtenberg", "Marzahn", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz", "Schöneberg", "Treptow", "other"]
+  const areaOptions = areas.map((area) => {
+    return (
+      <option key={area} value={`${area}`}>{area}</option>
+    )
+  });
+
 
   return (
     <div style={{ fontFamily: 'Quicksand' }}>
@@ -81,26 +104,13 @@ function SignupPage(props) {
           <div className='container-inner-3'>
             <label>gender :</label>
             <select style={{ width: '8vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} name="gender" value={gender} onChange={handleGender} required>
-              <option value="default">choose...</option>
-              <option value="male">male</option>
-              <option value="female">female</option>
-              <option value="other">other</option>
+              {genderOptions}
             </select>
           </div>
           <div className='container-inner-3'>
             <label>type :</label>
-            <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" value={animal} onChange={handleAnimal} required>
-              <option value="default" >animal...</option>
-              <option value="ape">ape</option>
-              <option value="bird">bird</option>
-              <option value="cat">cat</option>
-              <option value="dog">dog</option>
-              <option value="fish">fish</option>
-              <option value="hedgehog">hedgehog</option>
-              <option value="monkey">monkey</option>
-              <option value="rabbit">rabbit</option>
-              <option value="raccoon">raccoon</option>
-              <option value="tiger">tiger</option>
+            <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" onChange={handleAnimal} value={animal} required>
+              {animalOptions}
             </select>
           </div>
 
@@ -112,49 +122,26 @@ function SignupPage(props) {
 
         <div className='container-Signup-9-1'>
           <div className='container-inner'>
-
             <label>height (cm) :</label>
             <input style={{ width: '7.3vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} type="number" name="height" value={height} onChange={handleHeight} required />
           </div>
           <div className='container-inner'>
-
             <label>weight (kg) :</label>
             <input style={{ width: '7.3vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px', borderTopRightRadius: '10px' }} type="number" name="weight" value={weight} onChange={handleWeight} required />
           </div>
           <div className='container-inner'>
-
             <label>area :</label>
-
             <select style={{ width: '7.7vw', borderBottomLeftRadius: '10px', height: '3.8vh' }} name="area" value={area} onChange={handleArea}>
-              <option value="default" >choose...</option>
-              <option value="Charlottenburg">Charlottenburg</option>
-              <option value="Friedrichshain">Friedrichshain</option>
-              <option value="Kreuzberg">Kreuzberg</option>
-              <option value="Lichtenberg">Lichtenberg</option>
-              <option value="Marzahn">Marzahn</option>
-              <option value="Mitte">Mitte</option>
-              <option value="Neukölln">Neukölln</option>
-              <option value="Pankow">Pankow</option>
-              <option value="Reinickendorf">Reinickendorf</option>
-              <option value="Spandau">Spandau</option>
-              <option value="Steglitz">Steglitz</option>
-              <option value="Schöneberg">Schöneberg</option>
-              <option value="Treptow">Treptow</option>
-              <option value="notSure">other</option>
+              {areaOptions}
             </select>
-
           </div>
-
         </div>
 
         <div className='Signup-9-1'>
-
           <label>about me :</label>
-
           <textarea style={{ border: 'none', marginBottom: '1vh' }} type="text" name="aboutMe" value={aboutMe} onChange={handleAboutMe} cols="40" rows="5" required />
-
-
         </div>
+
         <div className='Signup-9-1'>
           <label>upload profile photo :</label>
           <input type="file" onChange={(e) => setImage(e.target.files[0])} required></input>
