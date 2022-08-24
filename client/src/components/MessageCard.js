@@ -15,7 +15,7 @@ function MessageCard({ message }) {
                     <div className="sent-by-right">
                         <p>sent by&nbsp;&nbsp;
                             <a href={message.userSend._id}>
-                                <img src={message.userSend.url} style={{ borderRadius: '50%', height: '4vw', width: '4vw', objectFit: 'cover' }} />
+                                <img src={message.userSend.url} style={{ borderRadius: '50%', height: '4vw', width: '4vw', objectFit: 'cover' }} alt="user-send"/>
                             </a>
                         </p>
                     </div>
@@ -30,7 +30,7 @@ function MessageCard({ message }) {
                     <div className="sent-by-right">
                         <p>sent by&nbsp;&nbsp;
                             <a href={message.userSend._id}>
-                                <img src={message.userSend.url} style={{ borderRadius: '50%', height: '4vw', width: '4vw', objectFit: 'cover' }} />
+                                <img src={message.userSend.url} style={{ borderRadius: '50%', height: '4vw', width: '4vw', objectFit: 'cover' }} alt="user-send"/>
                             </a>
                         </p>
                     </div>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import UserCard from "./../components/UserCard";
-import { useContext } from "react";
-import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
 
 function UserListPage() {
