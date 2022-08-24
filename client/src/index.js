@@ -9,9 +9,7 @@ import axios from 'axios';
 
 if (process.env.NODE_ENV === "development"){
   axios.defaults.baseURL = 'http://localhost:5006';
-} else {
-  axios.defaults.baseURL = 'https://datingapes.herokuapp.com/';
-}
+} 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
