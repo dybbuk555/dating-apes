@@ -75,17 +75,12 @@
 }
 
 .Home-footer{
-  padding-right: 2vw;
-  padding-top: 8vh;
+  padding-left: 3vw;
+  padding-top: 6.5vh;
   font-weight:840;
   display:flex;
   align-items:center;
-  justify-content:flex-end;
-  gap:10px;
-}
-
-.Home-footer > a{
-  color:rgba(255,255,255,1);
+  justify-content:flex-start;
 }
 
 .Signup-9-1 {
