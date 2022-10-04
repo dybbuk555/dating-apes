@@ -35,7 +35,7 @@ function UserDetailsPage(props) {
           <div className='UserDetail-2'>
             <div className='UserDetail-3-1'>
               <div className='UserDetail-3-1-1'>
-                <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} alt="user" />
+                <img src={user.url.replace('upload/', 'upload/w_600,h_600,c_limit/')} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} alt="user" />
               </div>
             </div>
             <div className='UserDetail-3-2'>
