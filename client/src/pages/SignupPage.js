@@ -42,7 +42,7 @@ function SignupPage(props) {
       .then(response => response.json())
       .then(data => {
         const requestBody = { email, password, name, birthday, gender, lang, animal, height, weight, url: data.url, aboutMe, area };
-        axios.post(`/auth/signup`, requestBody)
+        axios.post(`http://localhost:5005/auth/signup`, requestBody)
           .then((response) => {
             navigate("/login");
           })
@@ -54,28 +54,21 @@ function SignupPage(props) {
       .catch(err => console.log(err))
   }
 
-  const genders = ["choose...", "male", "female", "other"]
-  const genderOptions = genders.map((gender) => {
-    return (
-      <option key={gender} value={`${gender}`}>{gender}</option>
-    )
-  });
+  const chooseOptionLabel = <option key='no-choice' value=''>Choose...</option>
+  const genderOptions = [chooseOptionLabel].concat(
+    ["male", "female", "other"].map(gender =>
+      (<option key={gender} value={gender}>{gender}</option>)
+    ))
 
+  const animalOptions = [chooseOptionLabel].concat(
+    ["ape", "bird", "cat", "dog", "fish", "hedgehog", "monkey", "rabbit", "raccoon", "tiger"].map(animal =>
+      (<option key={animal} value={animal}>{animal}</option>)
+    ))
 
-  const animals = ["choose the animal...", "ape", "bird", "cat", "dog", "fish", "hedgehog", "monkey", "rabbit", "raccoon", "tiger"]
-  const animalOptions = animals.map((animal) => {
-    return (
-      <option key={animal} value={`${animal}`}>{animal}</option>
-    )
-  });
-
-  const areas = ["choose...", "Charlottenburg", "Friedrichshain", "Kreuzberg", "Lichtenberg", "Marzahn", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz", "Schöneberg", "Treptow", "other"]
-  const areaOptions = areas.map((area) => {
-    return (
-      <option key={area} value={`${area}`}>{area}</option>
-    )
-  });
-
+  const areaOptions = [chooseOptionLabel].concat(
+    ["Charlottenburg", "Friedrichshain", "Kreuzberg", "Lichtenberg", "Marzahn", "Mitte", "Neukölln", "Pankow", "Reinickendorf", "Spandau", "Steglitz", "Schöneberg", "Treptow", "other"].map(area =>
+      (<option key={area} value={area}>{area}</option>)
+    ))
 
   return (
     <div style={{ fontFamily: 'Quicksand' }}>
@@ -107,6 +100,7 @@ function SignupPage(props) {
               {genderOptions}
             </select>
           </div>
+
           <div className='container-inner-3'>
             <label>type :</label>
             <select style={{ width: '8vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px' }} name="animal" onChange={handleAnimal} value={animal} required>

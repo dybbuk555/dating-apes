@@ -25,7 +25,7 @@ function UserDetailsPage(props) {
 
   useEffect(() => {
     getUser();
-  }, []);
+  });
 
   return (
     <div className='UserList-1' style={{ fontFamily: 'Quicksand' }}>
@@ -35,7 +35,7 @@ function UserDetailsPage(props) {
           <div className='UserDetail-2'>
             <div className='UserDetail-3-1'>
               <div className='UserDetail-3-1-1'>
-                <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} alt="user"/>
+                <img src={user.url} style={{ borderRadius: '5px', border: '1px solid black', height: '57.4vh', width: '34.7vw', objectFit: 'cover' }} alt="user" />
               </div>
             </div>
             <div className='UserDetail-3-2'>
@@ -56,7 +56,7 @@ function UserDetailsPage(props) {
                     <div>
                       <img
                         src="https://res.cloudinary.com/dsy2gebem/image/upload/v1658911517/third-project-bg/infoIcon_jxnrsn.png"
-                        style={{ height: '3.5vh' }} alt="info-icon"/>
+                        style={{ height: '3.5vh' }} alt="info-icon" />
                     </div>
                     <div className='UserDetail-9-2'>
                       <p>{user.name.slice(0, 1).toUpperCase() + user.name.slice(1).toLowerCase()} | {user.gender} | {user.animal}</p>
@@ -66,7 +66,7 @@ function UserDetailsPage(props) {
                     <div>
                       <img
                         src="https://res.cloudinary.com/dsy2gebem/image/upload/v1658912169/third-project-bg/heightIcon_copy_wb5vsn.png"
-                        style={{ height: '3.5vh' }} alt="height-icon"/>
+                        style={{ height: '3.5vh' }} alt="height-icon" />
                     </div>
                     <div className='UserDetail-9-2'>
                       <p>{user.height}cm | {user.weight}kg</p>
@@ -76,7 +76,7 @@ function UserDetailsPage(props) {
                     <div>
                       <img
                         src="https://res.cloudinary.com/dsy2gebem/image/upload/v1658911517/third-project-bg/langIcon_qnnoc8.png"
-                        style={{ height: '3.5vh' }} alt="lang-icon"/>
+                        style={{ height: '3.5vh' }} alt="lang-icon" />
                     </div>
                     <div className='UserDetail-9-2'>
                       <div className='UserDetail-9-2-1'>
@@ -89,7 +89,7 @@ function UserDetailsPage(props) {
                     <div>
                       <img
                         src="https://res.cloudinary.com/dsy2gebem/image/upload/v1658911517/third-project-bg/areaIcon_rsleh0.png"
-                        style={{ height: '3.5vh' }} alt="area-icon"/>
+                        style={{ height: '3.5vh' }} alt="area-icon" />
                     </div>
                     <div className='UserDetail-9-2'>
                       <p>{user.area}  </p>
