@@ -46,6 +46,7 @@ Since dating apps become one of the mainstream tools for connecting human being,
 - Mongoose MongoDB ODM - [mongoose](https://www.npmjs.com/package/mongoose)@6.4.5
 - JavaScript library for building user interfaces - [react](https://facebook.github.io/react/)@18.2.0
 - Declarative routing for React web applications - [react-router-dom](https://github.com/remix-run/react-router)@6.3.0
+- Run multiple commands concurrently - [concurrently](https://www.npmjs.com/package/concurrently)@7.6.0
 
 ## Stack 
 
