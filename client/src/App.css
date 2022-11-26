@@ -31,6 +31,10 @@
   }
 }
 
+body {
+  background-color: rgb(246, 214, 232);
+}
+
 .Navbar-1 {
   display: flex;
   flex-direction: row;
@@ -74,13 +78,13 @@
   padding-left: 3vw;
 }
 
-.Home-footer{
+.Home-footer {
   padding-left: 3vw;
   padding-top: 6.5vh;
-  font-weight:840;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
+  font-weight: 840;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .Signup-9-1 {
@@ -194,14 +198,14 @@ select {
   display: flex;
   align-items: center;
   flex-direction: row;
-  height:3vh;
+  height: 3vh;
 }
 
 .UserCard-2-1-2 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  height:3vh;
+  height: 3vh;
 }
 
 .UserCard-2-2 {
@@ -245,7 +249,7 @@ select {
 .UserList-1 {
   width: 100vw;
   background-repeat: repeat-x;
-  background-image: url(https://res.cloudinary.com/dsy2gebem/image/upload/v1658685138/third-project-bg/0000_copy_tngdtb.png);
+  background-color: rgb(246, 214, 232);
 }
 
 .UserList-2 {
@@ -383,5 +387,8 @@ select {
   border-top-right-radius: 4px;
   height: 29.5px;
   width: 6vw;
+}
 
+.btn-hover {
+  cursor: pointer;
 }

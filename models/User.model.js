@@ -15,7 +15,11 @@ const userSchema = new Schema({
   passwordHash: String,
   url: String,
   messages: [{ type: Schema.Types.ObjectId, ref: 'Message' }]
-});
+},
+  {
+    timestamps: true
+  }
+);
 
 const User = model("User", userSchema);
 

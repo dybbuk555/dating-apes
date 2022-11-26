@@ -45,7 +45,7 @@ function LoginPage(props) {
           <input type="password" name="password" value={password} onChange={handlePassword} />
         </div>
         <div className='Signup-9-1'>
-          <button style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >LOGIN</button>
+          <button className='btn-hover' style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >LOGIN</button>
         </div>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}

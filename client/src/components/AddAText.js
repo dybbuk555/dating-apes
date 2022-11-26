@@ -31,7 +31,7 @@ function AddAText(props) {
                     onChange={(e) => setAText(e.target.value)}
                     className='AddAText-input'
                 />
-                <button type="submit" className='AddAText-btn'>SEND</button>
+                <button type="submit" className='AddAText-btn btn-hover'>SEND</button>
             </form>
         </div>
     );

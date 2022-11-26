@@ -26,12 +26,12 @@ function HomePage() {
       <div className='Home-2-2' >
         {!isLoggedIn && (
           <>
-            <Link to="/signup"> <button style={{ fontSize: '1.2em', fontWeight: '900', color: 'white', backgroundColor: 'black', padding: '0.6rem', paddingLeft: '2rem', paddingRight: '2rem', border: 'none', marginTop: '5vh', marginLeft: '3px' }}>JOIN US</button> </Link>
+            <Link to="/signup"> <button className='btn-hover' style={{ fontSize: '1.2em', fontWeight: '900', color: 'white', backgroundColor: 'black', padding: '0.6rem', paddingLeft: '2rem', paddingRight: '2rem', border: 'none', marginTop: '5vh', marginLeft: '3px' }}>JOIN US</button> </Link>
           </>
         )}
       </div>
       <div className='Home-footer'>
-        <p style={{color:'black'}}>&copy; 2022 <a href="https://github.com/WHL99/" target="_blank" rel="noreferrer" style={{textDecoration:'underline', color:'black'}}>Wen-Hsuan Liao</a> All Rights Reserved</p>
+        <p style={{ color: 'black' }}>&copy; 2022 <a href="https://github.com/WHL99/" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline', color: 'black' }}>Wen-Hsuan Liao</a> All Rights Reserved</p>
       </div>
     </div>
   );

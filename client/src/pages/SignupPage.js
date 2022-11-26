@@ -42,7 +42,7 @@ function SignupPage(props) {
       .then(response => response.json())
       .then(data => {
         const requestBody = { email, password, name, birthday, gender, lang, animal, height, weight, url: data.url, aboutMe, area };
-        axios.post(`http://localhost:5005/auth/signup`, requestBody)
+        axios.post(`/auth/signup`, requestBody)
           .then((response) => {
             navigate("/login");
           })
@@ -142,7 +142,7 @@ function SignupPage(props) {
         </div>
 
         <div className='Signup-9-1'>
-          <button style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >SIGN UP</button>
+          <button className='btn-hover' style={{ borderRadius: '30px', marginTop: '1.5vh' }} type="submit" >SIGN UP</button>
         </div>
 
       </form>

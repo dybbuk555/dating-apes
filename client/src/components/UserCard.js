@@ -16,7 +16,8 @@ function UserCard({ user }) {
         <div >
             <Link to={`/users/${_id}`} className="UserCard-link" >
                 <div className="UserCard">
-                    <img src={url.replace('upload/', 'upload/w_300,h_300,c_limit/')} className="UserCard-img" alt="user-img" />
+                    {/* <img src={url.replace('upload/', 'upload/w_300,h_300,c_limit/')} className="UserCard-img" alt="user-img" /> */}
+                    <img src={url} className="UserCard-img" alt="user-img" />
                     <div>
                         <div className="UserCard-1">
                             <div className="UserCard-2-1">
