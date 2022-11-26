@@ -52,7 +52,7 @@ Since dating apps become one of the mainstream tools for connecting human being,
 - Frontend: React
 - Backend: Express and Node.js
 - Database: MongoDB 
-- Deployed on Heroku 
+- Deployed on Render 
 
 ## 
 Now you have it&nbsp;&nbsp;&nbsp;🎉&nbsp;&nbsp;&nbsp;🦍 <br>
