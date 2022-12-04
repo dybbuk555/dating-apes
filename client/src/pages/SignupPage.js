@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+import Swal from "sweetalert2";
 
 function SignupPage(props) {
   const [email, setEmail] = useState("");
@@ -29,6 +30,7 @@ function SignupPage(props) {
   const handleAboutMe = (e) => setAboutMe(e.target.value);
   const handleArea = (e) => setArea(e.target.value);
   const [image, setImage] = useState("");
+
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     const data = new FormData()
@@ -41,9 +43,19 @@ function SignupPage(props) {
     })
       .then(response => response.json())
       .then(data => {
+        Swal.fire({
+          title: 'Uploading...',
+          html: 'Please wait...',
+          allowEscapeKey: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading()
+          }
+        });
         const requestBody = { email, password, name, birthday, gender, lang, animal, height, weight, url: data.url, aboutMe, area };
         axios.post(`/auth/signup`, requestBody)
           .then((response) => {
+            Swal.close();
             navigate("/login");
           })
           .catch((error) => {
@@ -117,11 +129,11 @@ function SignupPage(props) {
         <div className='container-Signup-9-1'>
           <div className='container-inner'>
             <label>height (cm) :</label>
-            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} type="number" name="height" value={height} onChange={handleHeight} required />
+            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderTopRightRadius: '10px' }} type="number" name="height" value={height || ''} onChange={handleHeight} required />
           </div>
           <div className='container-inner'>
             <label>weight (kg) :</label>
-            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px', borderTopRightRadius: '10px' }} type="number" name="weight" value={weight} onChange={handleWeight} required />
+            <input style={{ width: '7.3vw', marginRight: '0.6vw', borderBottomLeftRadius: '10px', borderTopRightRadius: '10px' }} type="number" name="weight" value={weight || ''} onChange={handleWeight} required />
           </div>
           <div className='container-inner'>
             <label>area :</label>
