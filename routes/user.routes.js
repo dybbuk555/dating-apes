@@ -9,7 +9,6 @@ router.get("/users", (req, res, next) => {
             res.json(allUsers)
         })
         .catch((err) => {
-            console.log(err)
             res.json(err)
         });
 });
